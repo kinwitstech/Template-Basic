@@ -15,7 +15,7 @@ export default function Jumbotron() {
       <div className="absolute inset-0 bg-black opacity-40"></div>
 
       {/* Content */}
-      <div className="relative z-10">
+      <div className="relative z-10 flex flex-col items-center justify-center px-4 py-35">
         <h2 className="mb-4 text-4xl font-extrabold text-white">CREATIVE DESIGN</h2>
         <p className="max-w-2xl mx-auto mb-6 text-lg text-white">
           Enigma is a Creative Minimal Style Onepage. It is Fully Responsive and Retina Ready.

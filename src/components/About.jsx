@@ -10,9 +10,9 @@ export default function About() {
             <span className="text-sm font-semibold tracking-wide text-gray-500">
               OUR STORY
             </span>
-            <h2 className="text-4xl font-bold leading-snug">
+            <h2 className="text-4xl font-bold leading-snug text-blue-300">
               Crafting Digital Experiences <br />
-              <span className="text-blue-600">that inspire</span>
+              <span className="text-blue-500">that inspire</span>
             </h2>
             <h4 className="text-lg font-medium text-gray-700">
               At Enigma, we don’t just build websites – we create powerful, tailored
