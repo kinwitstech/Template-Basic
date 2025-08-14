@@ -40,16 +40,17 @@ const FAQAccordion = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white p-4 sm:p-6 lg:p-8">
+    <section id="faq" className="px-4 py-5 bg-base-200">
+    <div className="min-h-screen bg-base-200 p-4 sm:p-6 lg:p-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-blue-500">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-primary">
             Frequently Asked
-            <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-purple-500">
+            <span className="block bg-clip-text text-accent">
               Questions
             </span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-secondary max-w-2xl mx-auto">
             Get answers to the most common questions about our design services and process.
           </p>
         </div>
@@ -65,19 +66,19 @@ const FAQAccordion = () => {
               >
                 <button
                   onClick={() => toggleItem(item.id)}
-                  className="w-full px-6 sm:px-8 py-6 text-left focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50 transition-all duration-200"
+                  className="w-full px-6 sm:px-8 py-6 text-left focus:outline-none focus:ring-2 focus:ring-transparent focus:ring-opacity-50 transition-all duration-200"
                   aria-expanded={isOpen}
                 >
                   <div className="flex items-center justify-between">
-                    <h3 className="text-lg sm:text-xl font-semibold text-purple-500 hover:text-pink-500 bg-clip-text pr-4">
+                    <h3 className="text-lg sm:text-xl font-semibold text-primary hover:text-accent bg-clip-text pr-4">
                       {item.question}
                     </h3>
                     <div className="flex-shrink-0 ml-4">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center transition-all duration-300 hover:scale-110">
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center transition-all duration-300 hover:scale-110">
                         {isOpen ? (
-                          <ChevronUpIcon className="w-5 h-5 text-gray-500" />
+                          <ChevronUpIcon className="w-5 h-5 text-white" />
                         ) : (
-                          <ChevronDownIcon className="w-5 h-5 text-gray-500" />
+                          <ChevronDownIcon className="w-5 h-5 text-white" />
                         )}
                       </div>
                     </div>
@@ -90,8 +91,8 @@ const FAQAccordion = () => {
                   }`}
                 >
                   <div className="px-6 sm:px-8 pb-6">
-                    <div className="bg-white rounded-xl p-6 border border-gray-200">
-                      <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+                    <div className="bg-white rounded-xl p-6 border border-secondary/20">
+                      <p className="text-secondary leading-relaxed whitespace-pre-line">
                         {item.answer}
                       </p>
                     </div>
@@ -103,6 +104,7 @@ const FAQAccordion = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

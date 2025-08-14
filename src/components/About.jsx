@@ -2,17 +2,17 @@ import aboutImage from "../assets/60241.jpg";
 
 export default function About() {
   return (
-    <section id="about" className="px-4 py-20 bg-white">
+    <section id="about" className="px-4 py-20 bg-base-200">
       <div className="flex flex-col items-stretch gap-8 lg:flex-row">
         {/* Left Column */}
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2 ml-4">
           <div className="space-y-4">
-            <span className="text-sm font-semibold tracking-wide text-gray-500">
+            <span className="text-sm font-semibold tracking-wide text-secondary">
               OUR STORY
             </span>
-            <h2 className="text-4xl font-bold leading-snug text-blue-300">
+            <h2 className="text-4xl font-bold leading-snug text-primary">
               Crafting Digital Experiences <br />
-              <span className="text-blue-500">that inspire</span>
+              <span className="text-accent">that inspire</span>
             </h2>
             <h4 className="text-lg font-medium text-gray-700">
               At Enigma, we don’t just build websites – we create powerful, tailored
@@ -29,7 +29,7 @@ export default function About() {
             </p>
             <a
               href="about-1.html"
-              className="inline-block px-6 py-2 text-white transition-colors duration-200 bg-blue-600 rounded hover:bg-blue-700"
+              className="inline-block px-6 py-2 text-white transition-colors duration-200 bg-primary/80 rounded hover:bg-primary"
             >
               Read More
             </a>
@@ -37,7 +37,7 @@ export default function About() {
         </div>
 
         {/* Right Column */}
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2 mr-4">
           <img
             src={aboutImage}
             className="object-cover w-full rounded shadow-lg"
