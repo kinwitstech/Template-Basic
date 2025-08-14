@@ -19,7 +19,7 @@ export default function Jumbotron() {
       <div className="relative flex flex-col items-center justify-center px-4 py-35">
         <h2 className="mb-4 text-4xl font-extrabold text-white">CREATIVE DESIGN</h2>
         <p className="max-w-2xl mx-auto mb-6 text-lg text-white">
-          Enigma is a Creative Minimal Style Onepage. It is Fully Responsive and Retina Ready.
+          Kinwits is a Creative Minimal Style Onepage. It is Fully Responsive and Retina Ready.
           Grab This Awesome Template Now.
         </p>
         <div className="flex justify-center space-x-5">

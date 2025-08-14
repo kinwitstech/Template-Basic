@@ -33,13 +33,13 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 shadow-lg bg-base-100/90 backdrop-blur-md">
-      <div className="px-6 mx-auto max-w-7xl">
+      <div className="px-20 mx-auto max-w-7xl">
         <div className="flex items-center justify-between h-16">
           <a
             href="#home"
             className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent"
           >
-            Enigma
+            Kinwits
           </a>
 
           {/* Desktop Navigation */}
