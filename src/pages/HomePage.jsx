@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Jumbotron from '../components/Jumbotron';
 import About from '../components/About';
+import FAQ from '../components/faq';
 
 const HomePage = () => {
   return (
@@ -18,6 +19,8 @@ const HomePage = () => {
       </section>
 
       <About />
+
+      <FAQ />
       
       {/* Footer */}
       <Footer />
