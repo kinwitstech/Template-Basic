@@ -4,6 +4,8 @@ import Footer from '../components/Footer';
 import Jumbotron from '../components/Jumbotron';
 import About from '../components/About';
 import FAQ from '../components/faq';
+import Testimonials from '../components/Testimonials';
+import ContactUs from '../components/ContactUs';
 
 const HomePage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -34,6 +36,10 @@ const HomePage = () => {
       <About />
 
       <FAQ />
+
+      <Testimonials />
+
+      <ContactUs />
       
       {/* Footer */}
       <Footer />

@@ -41,10 +41,10 @@ const FAQAccordion = () => {
 
   return (
     <section id="faq" className="px-4 py-5 bg-base-200">
-    <div className="min-h-screen bg-base-200 p-4 sm:p-6 lg:p-8">
-      <div className="max-w-4xl mx-auto">
+    <div className="container py-10">
+      <div className="container">
         <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-primary">
+          <h1 className="text-4xl font-bold mb-4 text-primary">
             Frequently Asked
             <span className="block bg-clip-text text-accent">
               Questions
@@ -62,7 +62,7 @@ const FAQAccordion = () => {
             return (
               <div
                 key={item.id}
-                className="bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden transition-all duration-300 hover:bg-gray-100 shadow-sm hover:shadow-md"
+                className="bg-gray-50 rounded-2xl border border-secondary/40 overflow-hidden transition-all duration-300 hover:bg-gray-100 shadow-sm hover:shadow-md"
               >
                 <button
                   onClick={() => toggleItem(item.id)}

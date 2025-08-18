@@ -10,6 +10,7 @@ export default function Navbar() {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "FAQ", href: "#faq" },
+    { name: "Testimonials", href: "#testimonials"},
     { name: "Contact", href: "#contact" },
   ];
 
@@ -33,7 +34,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 shadow-lg bg-base-100/90 backdrop-blur-md">
-      <div className="px-20 mx-auto max-w-7xl">
+      <div className="container">
         <div className="flex items-center justify-between h-16">
           <a
             href="#home"

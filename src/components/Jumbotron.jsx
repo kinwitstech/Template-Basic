@@ -16,7 +16,7 @@ export default function Jumbotron() {
       <div className="absolute inset-0 bg-black opacity-40"></div>
 
       {/* Content */}
-      <div className="relative flex flex-col items-center justify-center px-4 py-35">
+      <div className="relative flex flex-col items-center justify-center px-8 py-35">
         <h2 className="mb-4 text-4xl font-extrabold text-white">CREATIVE DESIGN</h2>
         <p className="max-w-2xl mx-auto mb-6 text-lg text-white">
           Kinwits is a Creative Minimal Style Onepage. It is Fully Responsive and Retina Ready.
