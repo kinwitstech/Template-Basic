@@ -25,7 +25,7 @@ const faqData = [
 ];
 
 const FAQAccordion = () => {
-  const [openItems, setOpenItems] = useState(new Set([1])); // First item open by default
+  const [openItems, setOpenItems] = useState(new Set([1]));
 
   const toggleItem = (id) => {
     setOpenItems(prev => {
@@ -40,8 +40,8 @@ const FAQAccordion = () => {
   };
 
   return (
-    <section id="faq" className="px-4 py-5 bg-base-200">
-    <div className="container py-10">
+    <section id="faq" className="px-4 py-20 bg-base-200">
+    <div className="container">
       <div className="container">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4 text-primary">
@@ -62,7 +62,7 @@ const FAQAccordion = () => {
             return (
               <div
                 key={item.id}
-                className="bg-gray-50 rounded-2xl border border-secondary/40 overflow-hidden transition-all duration-300 hover:bg-gray-100 shadow-sm hover:shadow-md"
+                className="bg-base-300 rounded-2xl border border-secondary/40 overflow-hidden transition-all duration-300 hover:bg-base-200 shadow-sm hover:shadow-md"
               >
                 <button
                   onClick={() => toggleItem(item.id)}
@@ -91,7 +91,7 @@ const FAQAccordion = () => {
                   }`}
                 >
                   <div className="px-6 sm:px-8 pb-6">
-                    <div className="bg-white rounded-xl p-6 border border-secondary/20">
+                    <div className="bg-base-300 rounded-xl p-6 border border-secondary/20">
                       <p className="text-secondary leading-relaxed whitespace-pre-line">
                         {item.answer}
                       </p>

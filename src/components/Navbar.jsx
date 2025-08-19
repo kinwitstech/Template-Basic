@@ -34,7 +34,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 shadow-lg bg-base-100/90 backdrop-blur-md">
-      <div className="container">
+      <div className="container bg-base-100">
         <div className="flex items-center justify-between h-16">
           <a
             href="#home"
@@ -67,7 +67,7 @@ export default function Navbar() {
               <MoonIcon className="swap-off w-5 h-5 text-yellow-400" />
             </label>
 
-            <button className="px-6 py-2 text-sm font-medium text-white rounded-full bg-gradient-to-r from-primary to-accent hover:shadow-lg">
+            <button className="px-6 py-2 text-sm font-medium text-white rounded-full bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:cursor-pointer">
               Get Started
             </button>
           </div>
@@ -87,7 +87,7 @@ export default function Navbar() {
 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 text-secondary hover:text-primary"
+              className="p-2 text-secondary hover:text-primary hover:cursor-pointer"
             >
               {isMenuOpen ? (
                 <XMarkIcon className="w-6 h-6" />
@@ -101,19 +101,19 @@ export default function Navbar() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-base-100 border-t">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-base-100">
               {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
                   onClick={(e) => scrollToSection(e, item.href)}
-                  className="block px-3 py-2 text-base font-medium text-base-content hover:text-primary"
+                  className="block px-3 py-2 text-base font-medium text-base-content hover:text-primary hover:cursor-pointer"
                 >
                   {item.name}
                 </a>
               ))}
               <div className="px-3 py-2">
-                <button className="w-full px-4 py-2 text-sm font-medium text-white rounded-full bg-gradient-to-r from-primary/90 to-accent/90">
+                <button className="w-full px-4 py-2 text-sm font-medium text-white rounded-full bg-gradient-to-r from-primary/90 to-accent/90 hover:cursor-pointer">
                   Get Started
                 </button>
               </div>

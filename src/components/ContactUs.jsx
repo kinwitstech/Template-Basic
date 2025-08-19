@@ -3,7 +3,7 @@ import { EnvelopeIcon, PhoneIcon, ClockIcon } from '@heroicons/react/24/solid';
 
 const ContactUs = () => {
   return (
-    <section id="contact" className="py-10 bg-base-200">
+    <section id="contact" className="py-20 bg-base-200">
       <div className="container">
         <div className="text-center mb-6">
           <h2 className="text-4xl font-bold text-accent mb-8">

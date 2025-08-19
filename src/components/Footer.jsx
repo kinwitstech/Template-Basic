@@ -1,7 +1,4 @@
-import { 
-  EnvelopeIcon, 
-  PhoneIcon, 
-  MapPinIcon,
+import {
   GlobeAltIcon
 } from '@heroicons/react/24/outline'
 
@@ -36,7 +33,7 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="text-white bg-gray-900">
-      <div className="px-6 sm:px-10 lg:px-20 py-16 mx-auto max-w-7xl">
+      <div className="container py-10">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Add your Company Info in this block */}
           <div className="col-span-1 lg:col-span-2">

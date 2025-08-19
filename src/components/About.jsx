@@ -5,7 +5,7 @@ export default function About() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section id="about" className="container bg-base-200">
+    <section id="about" className="container py-20 bg-base-200">
       <div className="flex flex-col items-stretch gap-8 lg:flex-row">
         {/* Left Column */}
         <div className="lg:w-1/2">
@@ -17,12 +17,12 @@ export default function About() {
               Crafting Digital Experiences <br />
               <span className="text-accent">that inspire</span>
             </h2>
-            <h4 className="text-lg font-medium text-gray-700">
+            <h4 className="text-lg font-medium text-secondary text-balance">
               At Kinwits, we don’t just build websites – we create powerful,
               tailored digital solutions that help businesses thrive in the
               modern world.
             </h4>
-            <p className="leading-relaxed text-gray-600">
+            <p className="leading-relaxed text-secondary text-balance">
               Founded in 2023, Kinwits is a creative technology company driven by
               the vision of making digital innovation accessible to all.
             </p>
@@ -30,14 +30,13 @@ export default function About() {
             {/* Read More Button */}
             <button
               onClick={() => setIsOpen(true)}
-              className="inline-block px-6 py-2 text-white transition-colors duration-200 bg-primary/80 rounded hover:bg-primary"
+              className="inline-block px-6 py-2 text-white bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:cursor-pointer hover:scale-110"
             >
               Read More
             </button>
           </div>
         </div>
 
-        {/* Right Column */}
         <div className="lg:w-1/2">
           <img
             src={aboutImage}
@@ -46,7 +45,6 @@ export default function About() {
         </div>
       </div>
 
-      {/* Modal */}
       {isOpen && (
         <dialog id="about-modal" className="modal modal-open">
           <div className="modal-box max-w-3xl">
@@ -76,7 +74,7 @@ export default function About() {
 
             <div className="modal-action">
               <button
-                className="btn btn-primary"
+                className="btn btn-primary bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:cursor-pointer"
                 onClick={() => setIsOpen(false)}
               >
                 Close

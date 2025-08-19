@@ -12,7 +12,6 @@ const HomePage = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show button after scrolling down 200px
       setIsVisible(window.scrollY > 200);
     };
     window.addEventListener("scroll", handleScroll);
@@ -24,14 +23,10 @@ const HomePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Navigation */}
+    <div className="min-h-screen bg-base-200">
       <Navbar />
       
-      {/* Jumbotron Section - Additional engaging content */}
-      <section className="py-16 bg-base-200">
-          <Jumbotron />
-      </section>
+      <Jumbotron />
 
       <About />
 
@@ -41,14 +36,12 @@ const HomePage = () => {
 
       <ContactUs />
       
-      {/* Footer */}
       <Footer />
       
-      {/* Scroll to top button */}
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed z-50 p-3 text-white transition-opacity duration-300 bg-primary/80 rounded-full shadow-lg bottom-8 right-8 hover:bg-primary"
+          className="fixed z-50 p-3 text-white opacity-70 bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:opacity-100 hover:cursor-pointer rounded-full bottom-8 right-8"
           aria-label="Scroll to top"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
