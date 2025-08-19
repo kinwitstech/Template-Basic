@@ -18,10 +18,10 @@ export default function Jumbotron() {
           Grab This Awesome Template Now.
         </p>
         <div className="flex justify-center space-x-5">
-          <button className="px-6 py-2 text-white bg-gradient-to-r from-primary/90 to-accent/90 rounded hover:bg-primary">
+          <button className="px-6 py-2 text-white bg-gradient-to-r from-primary/90 to-accent/90 rounded hover:bg-primary hover:cursor-pointer">
             Learn More
           </button>
-          <button className="px-6 py-2 bg-base-300 rounded hover:bg-base-200">
+          <button className="px-6 py-2 bg-base-300 rounded hover:bg-base-200 hover:cursor-pointer">
             Purchase It
           </button>
         </div>

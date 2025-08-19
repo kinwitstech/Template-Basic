@@ -1,6 +1,4 @@
-import {
-  GlobeAltIcon
-} from '@heroicons/react/24/outline'
+import { GlobeAltIcon } from '@heroicons/react/24/outline'
 
 const footerLinks = {
   company: [
@@ -35,7 +33,7 @@ export default function Footer() {
     <footer className="text-white bg-gray-900">
       <div className="container py-10">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {/* Add your Company Info in this block */}
+          {/* Company Info */}
           <div className="col-span-1 lg:col-span-2">
             <h3 className="mb-4 text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary/90 to-accent/90">
               Kinwits
@@ -46,8 +44,8 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div>
+          {/* Company Links */}
+          <div className="order-1 md:order-1">
             <h4 className="mb-4 text-lg font-semibold">Company</h4>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
@@ -60,7 +58,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          {/* Services */}
+          <div className="order-2 md:order-3">
             <h4 className="mb-4 text-lg font-semibold">Services</h4>
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
@@ -73,7 +72,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          {/* Support */}
+          <div className="order-3 md:order-2">
             <h4 className="mb-4 text-lg font-semibold">Support</h4>
             <ul className="space-y-2">
               {footerLinks.support.map((link) => (

@@ -40,7 +40,7 @@ const FAQAccordion = () => {
   };
 
   return (
-    <section id="faq" className="px-4 py-20 bg-base-200">
+    <section id="faq" className="px-4 scroll-mt-20 py-10 bg-base-200">
     <div className="container">
       <div className="container">
         <div className="text-center mb-12">
@@ -66,7 +66,7 @@ const FAQAccordion = () => {
               >
                 <button
                   onClick={() => toggleItem(item.id)}
-                  className="w-full px-6 sm:px-8 py-6 text-left focus:outline-none focus:ring-2 focus:ring-transparent focus:ring-opacity-50 transition-all duration-200"
+                  className="w-full px-6 sm:px-8 py-6 text-left focus:outline-none focus:ring-2 focus:ring-transparent focus:ring-opacity-50 hover:cursor-pointer"
                   aria-expanded={isOpen}
                 >
                   <div className="flex items-center justify-between">

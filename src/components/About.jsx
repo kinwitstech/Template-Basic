@@ -5,7 +5,7 @@ export default function About() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section id="about" className="container py-20 bg-base-200">
+    <section id="about" className="container scroll-mt-10 py-10 bg-base-200">
       <div className="flex flex-col items-stretch gap-8 lg:flex-row">
         {/* Left Column */}
         <div className="lg:w-1/2">
@@ -51,19 +51,19 @@ export default function About() {
             <h3 className="text-2xl font-bold text-primary mb-4">
               Crafting Digital Experiences that inspire
             </h3>
-            <p className="text-gray-600 leading-relaxed mb-4">
+            <p className="text-secondary leading-relaxed mb-4">
               At Kinwits, we don’t just build websites – we create powerful,
               tailored digital solutions that help businesses thrive in the
               modern world.
             </p>
-            <p className="text-gray-600 leading-relaxed mb-4">
+            <p className="text-secondary leading-relaxed mb-4">
               Founded in 2023, Kinwits is a creative technology company driven by
               the vision of making digital innovation accessible to all. We
               specialize in designing engaging user experiences, developing
               high-performance web applications, and delivering solutions that
               are as functional as they are beautiful.
             </p>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-secondary leading-relaxed">
               Our passionate team blends creativity, strategy, and technology to
               help brands stand out, connect with their audience, and grow in an
               ever-evolving marketplace. We believe in a collaborative approach,

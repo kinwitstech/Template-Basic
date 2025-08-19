@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import {
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  ChatBubbleOvalLeftIcon,
+} from "@heroicons/react/24/outline";
 
 const testimonials = [
   { id: 1, content: "I'm a testimonial...", author: "Name 1", role: "Role of Name 1" },
@@ -42,7 +46,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-20 bg-base-200">
+    <section id="testimonials" className="scroll-mt-20 py-10 bg-base-200">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-accent mb-4">Testimonials</h2>
@@ -51,55 +55,47 @@ const Testimonials = () => {
         {/* Cards Grid */}
         <div
           className={`
-            grid gap-6 justify-center
-            grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
+            max-w-full mx-auto gap-6
+            ${cardsPerPage === 1 ? "flex justify-center" : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"}
           `}
         >
-          {filledTestimonials.map((testimonial, idx) =>
-            testimonial ? (
-              <div
-                key={testimonial.id}
-                className="bg-base-300 rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 max-w-sm"
-              >
-                <div className="mb-6">
-                  <svg
-                    className="w-12 h-12 text-secondary/60"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-10zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                  </svg>
-                </div>
-
-                <blockquote className="text-secondary text-base leading-relaxed mb-6">
-                  "{testimonial.content}"
-                </blockquote>
-
-                <div className="border-t pt-4">
-                  <cite className="not-italic">
-                    <div className="text-primary font-semibold text-lg">
-                      {testimonial.author}
-                    </div>
-                    {testimonial.role && (
-                      <div className="text-accent text-sm mt-1">
-                        {testimonial.role}
-                      </div>
-                    )}
-                  </cite>
-                </div>
+          {currentTestimonials.map((testimonial) => (
+            <div
+              key={testimonial.id}
+              className={`
+              bg-base-300 rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300
+              ${cardsPerPage === 1 ? "w-full max-w-xl" : "max-w-sm"}
+            `}
+            >
+              <div className="mb-6">
+                <ChatBubbleOvalLeftIcon className="w-12 h-12 text-secondary/60" />
               </div>
-            ) : (
-              <div key={`empty-${idx}`} className="invisible max-w-sm" />
-            )
-          )}
+
+              <blockquote className="text-secondary text-base leading-relaxed mb-6">
+                "{testimonial.content}"
+              </blockquote>
+
+              <div className="border-t pt-4">
+                <cite className="not-italic">
+                  <div className="text-primary font-semibold text-lg">
+                    {testimonial.author}
+                  </div>
+                  {testimonial.role && (
+                    <div className="text-accent text-sm mt-1">{testimonial.role}</div>
+                  )}
+                </cite>
+              </div>
+            </div>
+          ))}
         </div>
+
 
         {/* Controls */}
         <div className="flex justify-center items-center gap-4 mt-8">
           <button
             onClick={() => setPage((p) => Math.max(p - 1, 0))}
             disabled={page === 0}
-            className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 disabled:opacity-40"
+            className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 disabled:opacity-40 hover:cursor-pointer"
           >
             <ChevronLeftIcon className="w-6 h-6 text-primary" />
           </button>
@@ -111,7 +107,7 @@ const Testimonials = () => {
           <button
             onClick={() => setPage((p) => Math.min(p + 1, totalPages - 1))}
             disabled={page === totalPages - 1}
-            className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 disabled:opacity-40"
+            className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 disabled:opacity-40 hover:cursor-pointer"
           >
             <ChevronRightIcon className="w-6 h-6 text-primary" />
           </button>

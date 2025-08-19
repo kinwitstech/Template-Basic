@@ -10,7 +10,7 @@ export default function Navbar() {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "FAQ", href: "#faq" },
-    { name: "Testimonials", href: "#testimonials"},
+    { name: "Testimonials", href: "#testimonials" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -33,7 +33,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 shadow-lg bg-base-100/90 backdrop-blur-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 shadow-lg bg-base-100 backdrop-blur-md">
       <div className="container bg-base-100">
         <div className="flex items-center justify-between h-16">
           <a
@@ -74,7 +74,6 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-2">
-            {/* DaisyUI Theme Toggle (Mobile) */}
             <label className="swap swap-rotate">
               <input
                 type="checkbox"
@@ -101,22 +100,20 @@ export default function Navbar() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-base-100">
+            <div className="flex flex-col items-center px-2 pt-4 pb-6 space-y-3 bg-base-100">
               {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
                   onClick={(e) => scrollToSection(e, item.href)}
-                  className="block px-3 py-2 text-base font-medium text-base-content hover:text-primary hover:cursor-pointer"
+                  className="text-base font-medium text-base-content hover:text-primary hover:cursor-pointer"
                 >
                   {item.name}
                 </a>
               ))}
-              <div className="px-3 py-2">
-                <button className="w-full px-4 py-2 text-sm font-medium text-white rounded-full bg-gradient-to-r from-primary/90 to-accent/90 hover:cursor-pointer">
-                  Get Started
-                </button>
-              </div>
+              <button className="mt-2 px-4 py-2 text-sm font-medium text-white rounded-full bg-gradient-to-r from-primary/90 to-accent/90 hover:cursor-pointer">
+                Get Started
+              </button>
             </div>
           </div>
         )}
