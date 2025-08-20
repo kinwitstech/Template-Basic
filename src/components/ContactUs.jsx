@@ -18,8 +18,8 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="scroll-mt-10 py-10 bg-base-200">
-      <div className="container px-40">
+    <section id="contact" className="container scroll-mt-20 py-10 sm:py-15 lg:py-20 bg-base-200">
+      <div className="container px-4 lg:px-40">
           {/* Header */}
           <div className="text-center mb-12">
             <h2 className="text-5xl font-serif text-accent mb-4">
@@ -45,15 +45,15 @@ const ContactForm = () => {
             {/* First Row - First Name & Last Name */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block font-serif text-info/50 text-sm mb-2">
+                <label className="block font-serif text-info/80 text-sm mb-2">
                   Enter Your First Name *
                 </label>
                 <div className="relative">
-                  <UserIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-info/50" />
+                  <UserIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-content/70" />
                   <input
                     type="text"
                     {...register('firstName', { required: 'First name is required' })}
-                    className="w-full pl-10 pr-4 py-3 border border-info-content/40 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent placeholder-info/50 font-serif "
+                    className="w-full pl-10 pr-4 py-3 border border-info-content/40 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent placeholder-neutral-content/70 font-serif "
                     placeholder="First Name"
                   />
                 </div>
@@ -63,15 +63,15 @@ const ContactForm = () => {
               </div>
 
               <div>
-                <label className="block font-serif text-info/50 text-sm mb-2">
+                <label className="block font-serif text-info/80 text-sm mb-2">
                   Enter Your Last Name *
                 </label>
                 <div className="relative">
-                  <UserIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-info/50" />
+                  <UserIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-content/70" />
                   <input
                     type="text"
                     {...register('lastName', { required: 'Last name is required' })}
-                    className="w-full pl-10 pr-4 py-3 border border-info-content/40 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent placeholder-info/50 font-serif "
+                    className="w-full pl-10 pr-4 py-3 border border-info-content/40 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent placeholder-neutral-content/70 font-serif "
                     placeholder="Last Name"
                   />
                 </div>
@@ -84,11 +84,11 @@ const ContactForm = () => {
             {/* Second Row - Email & Subject */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block font-serif text-info/50 text-sm mb-2">
+                <label className="block font-serif text-info/80 text-sm mb-2">
                   Enter Your Email *
                 </label>
                 <div className="relative">
-                  <EnvelopeIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-info/50" />
+                  <EnvelopeIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-content/70" />
                   <input
                     type="email"
                     {...register('email', { 
@@ -98,7 +98,7 @@ const ContactForm = () => {
                         message: 'Invalid email address'
                       }
                     })}
-                    className="w-full pl-10 pr-4 py-3 border border-info-content/40 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent placeholder-info/50 font-serif"
+                    className="w-full pl-10 pr-4 py-3 border border-info-content/40 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent placeholder-neutral-content/70 font-serif"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -108,15 +108,15 @@ const ContactForm = () => {
               </div>
 
               <div>
-                <label className="block font-serif text-info/50 text-sm mb-2">
+                <label className="block font-serif text-info/80 text-sm mb-2">
                   Enter Your Subject *
                 </label>
                 <div className="relative">
-                  <ChatBubbleLeftRightIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-info/50" />
+                  <ChatBubbleLeftRightIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-content/70" />
                   <input
                     type="text"
                     {...register('subject', { required: 'Subject is required' })}
-                    className="w-full pl-10 pr-4 py-3 border border-info-content/40 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent placeholder-info/50 font-serif "
+                    className="w-full pl-10 pr-4 py-3 border border-info-content/40 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent placeholder-neutral-content/70 font-serif "
                     placeholder="Subject"
                   />
                 </div>
@@ -130,13 +130,13 @@ const ContactForm = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="col-span-1 md:col-span-3 flex justify-center">
                 <div className="w-full md:w-2/3">
-                  <label className="block font-serif text-info/50 text-sm mb-2">
+                  <label className="block font-serif text-info/80 text-sm mb-2">
                     Enter Your Message *
                   </label>
                   <textarea
                     {...register('message', { required: 'Message is required' })}
                     rows="6"
-                    className="w-full px-4 py-3 border border-info-content/40 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent placeholder-info/50 font-serif "
+                    className="w-full px-4 py-3 border border-info-content/40 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent placeholder-neutral-content/70 font-serif "
                     placeholder="Type your message here..."
                   ></textarea>
                   {errors.message && (
@@ -150,7 +150,7 @@ const ContactForm = () => {
             <div className="col-span-1 md:col-span-3 flex justify-center">
               <button
                 type="submit"
-                className="bg-gradient-to-r from-primary to-accent text-white py-4 px-8 font-serif rounded-xl text-lg hover:shadow-lg hover:scale-105 hover:cursor-pointer"
+                className="bg-gradient-to-r from-primary to-accent text-white py-2 px-8 font-serif rounded-xl text-lg hover:shadow-lg hover:scale-105 hover:cursor-pointer"
               >
                 Submit
               </button>

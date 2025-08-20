@@ -76,7 +76,7 @@ function Products() {
   };
 
   return (
-    <section id="products" className="scroll-mt-10 py-10 bg-base-200">
+    <section id="products" className="container scroll-mt-20 mt-10 sm:mt-15 lg:mt-20 bg-base-200">
       <div className="p-6">
         <div className="text-center mb-10">
           <h2 className="text-5xl font-serif text-accent mb-4">Our Products</h2>
@@ -174,8 +174,8 @@ function Products() {
             />
 
             <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold text-gray-800">{selectedItem.title}</h3>
-                <p className="mt-2 text-gray-600">{selectedItem.description}</p>
+                <h3 className="text-xl font-serif font-semibold text-gray-800">{selectedItem.title}</h3>
+                <p className="mt-2 font-serif text-gray-600">{selectedItem.description}</p>
             </div>
             </div>
         </div>

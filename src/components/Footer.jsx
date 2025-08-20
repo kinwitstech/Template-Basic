@@ -38,7 +38,7 @@ export default function Footer() {
             <h3 className="mb-4 text-2xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary/90 to-accent/90">
               Kinwits
             </h3>
-            <p className="max-w-md mb-6 font-serif text-info/50">
+            <p className="max-w-md mb-6 font-serif text-neutral-content">
               Transform your digital presence with our innovative solutions. 
               We help businesses grow and succeed in the digital age.
             </p>
@@ -50,7 +50,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="font-serif text-info/50 transition-colors duration-300 hover:text-white">
+                  <a href={link.href} className="font-serif text-neutral-content/70 transition-colors duration-300 hover:text-white">
                     {link.name}
                   </a>
                 </li>
@@ -64,7 +64,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="font-serif text-info/50 transition-colors duration-300 hover:text-white">
+                  <a href={link.href} className="font-serif text-neutral-content/70 transition-colors duration-300 hover:text-white">
                     {link.name}
                   </a>
                 </li>
@@ -78,7 +78,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="font-serif text-info/50 transition-colors duration-300 hover:text-white">
+                  <a href={link.href} className="font-serif text-neutral-content/70 transition-colors duration-300 hover:text-white">
                     {link.name}
                   </a>
                 </li>
@@ -89,14 +89,14 @@ export default function Footer() {
 
         <div className="pt-8 mt-12 border-t border-info-content/50">
           <div className="flex flex-col items-center justify-between md:flex-row">
-            <p className="text-sm font-serif text-info/50">
+            <p className="text-sm font-serif text-neutral-content/70">
               © {new Date().getFullYear()} Kinwits. All rights reserved.
             </p>
             <div className="flex mt-4 space-x-6 md:mt-0">
-              <a href="#" className="text-sm font-serif text-info/50 transition-colors duration-300 hover:text-white">
+              <a href="#" className="text-sm font-serif text-neutral-content/70 transition-colors duration-300 hover:text-white">
                 Privacy Policy
               </a>
-              <a href="#" className="text-sm font-serif text-info/50 transition-colors duration-300 hover:text-white">
+              <a href="#" className="text-sm font-serif text-neutral-content/70 transition-colors duration-300 hover:text-white">
                 Terms of Service
               </a>
             </div>

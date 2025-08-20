@@ -5,24 +5,24 @@ export default function About() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section id="about" className="container scroll-mt-20 mt-10 bg-base-200">
+    <section id="about" className="container scroll-mt-20 mt-10 sm:mt-15 lg:mt-20 bg-base-200">
       <div className="flex flex-col items-stretch gap-8 lg:flex-row">
         {/* Left Column */}
         <div className="lg:w-1/2">
           <div className="space-y-4">
-            <span className="text-sm font-serif tracking-wide text-info-content">
+            <span className="text-sm font-serif tracking-wide text-info">
               OUR STORY
             </span>
             <h2 className="text-4xl font-serif leading-snug text-primary">
               Crafting Digital Experiences <br />
               <span className="text-accent">that inspire</span>
             </h2>
-            <h4 className="text-lg font-serif text-info-content text-balance">
+            <h4 className="text-lg font-serif text-info/80 text-balance">
               At Kinwits, we don’t just build websites – we create powerful,
               tailored digital solutions that help businesses thrive in the
               modern world.
             </h4>
-            <p className="font-serif leading-relaxed text-info-content text-balance">
+            <p className="font-serif leading-relaxed text-info/80 text-balance">
               Founded in 2023, Kinwits is a creative technology company driven by
               the vision of making digital innovation accessible to all.
             </p>
@@ -51,19 +51,19 @@ export default function About() {
             <h3 className="text-2xl font-serif font-bold text-primary mb-4">
               Crafting Digital Experiences that inspire
             </h3>
-            <p className="text-info-content font-serif leading-relaxed mb-4">
+            <p className="text-info/80 font-serif leading-relaxed mb-4">
               At Kinwits, we don’t just build websites – we create powerful,
               tailored digital solutions that help businesses thrive in the
               modern world.
             </p>
-            <p className="text-info-content font-serif leading-relaxed mb-4">
+            <p className="text-info/80 font-serif leading-relaxed mb-4">
               Founded in 2023, Kinwits is a creative technology company driven by
               the vision of making digital innovation accessible to all. We
               specialize in designing engaging user experiences, developing
               high-performance web applications, and delivering solutions that
               are as functional as they are beautiful.
             </p>
-            <p className="text-info-content font-serif leading-relaxed">
+            <p className="text-info/80 font-serif leading-relaxed">
               Our passionate team blends creativity, strategy, and technology to
               help brands stand out, connect with their audience, and grow in an
               ever-evolving marketplace. We believe in a collaborative approach,

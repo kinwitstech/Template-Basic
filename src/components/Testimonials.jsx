@@ -50,7 +50,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="mt-10 scroll-mt-20 bg-base-200 relative">
+    <section id="testimonials" className="container scroll-mt-20 mt-10 sm:mt-15 lg:mt-20 bg-base-200">
       <div className="container mx-auto px-4 bg-base-200">
         {/* Section Header */}
         <div className="text-center mb-12">

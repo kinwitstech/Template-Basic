@@ -43,7 +43,7 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="scroll-mt-20 mt-10 bg-base-200">
+    <section id="faq" className="container scroll-mt-20 mt-10 sm:mt-15 lg:mt-20 bg-base-200">
     <div className="bg-base-200 mt-10 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
