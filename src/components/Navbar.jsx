@@ -9,6 +9,7 @@ export default function Navbar() {
   const navigation = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
+    { name: "Products", href: "#products" },
     { name: "FAQ", href: "#faq" },
     { name: "Testimonials", href: "#testimonials" },
     { name: "Contact", href: "#contact" },
@@ -38,7 +39,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <a
             href="#home"
-            className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent"
+            className="text-2xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent"
           >
             Kinwits
           </a>
@@ -50,7 +51,7 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => scrollToSection(e, item.href)}
-                className="px-3 py-2 text-sm font-medium text-base-content hover:text-primary transition-colors"
+                className="py-2 text-sm font-serif font-medium text-base-content hover:text-primary transition-colors"
               >
                 {item.name}
               </a>
@@ -67,7 +68,7 @@ export default function Navbar() {
               <MoonIcon className="swap-off w-5 h-5 text-yellow-400" />
             </label>
 
-            <button className="px-6 py-2 text-sm font-medium text-white rounded-full bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:cursor-pointer">
+            <button className="px-6 py-2 text-sm font-serif font-medium text-white rounded-2xl bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:cursor-pointer">
               Get Started
             </button>
           </div>

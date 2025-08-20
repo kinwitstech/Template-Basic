@@ -6,6 +6,7 @@ import About from '../components/About';
 import FAQ from '../components/faq';
 import Testimonials from '../components/Testimonials';
 import ContactUs from '../components/ContactUs';
+import Products from '../components/Products';
 
 const HomePage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,6 +30,8 @@ const HomePage = () => {
       <Jumbotron />
 
       <About />
+
+      <Products />
 
       <FAQ />
 

@@ -1,120 +1,124 @@
-import { useState, useEffect } from "react";
+import React, { useRef } from "react";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
-  ChatBubbleOvalLeftIcon,
 } from "@heroicons/react/24/outline";
 
 const testimonials = [
-  { id: 1, content: "I'm a testimonial...", author: "Name 1", role: "Role of Name 1" },
-  { id: 2, content: "I'm a testimonial...", author: "Name 2", role: "Role of Name 2" },
-  { id: 3, content: "I'm a testimonial...", author: "Name 3", role: "Role of Name 3" },
-  { id: 4, content: "I'm a testimonial...", author: "Name 4", role: "Role of Name 4" },
-  { id: 5, content: "I'm a testimonial...", author: "Name 5", role: "Role of Name 5" },
-  { id: 6, content: "I'm a testimonial...", author: "Name 6", role: "Role of Name 6" },
-  { id: 7, content: "I'm a testimonial...", author: "Name 7", role: "Role of Name 7" },
-  { id: 8, content: "I'm a testimonial...", author: "Name 8", role: "Role of Name 8" },
+  {
+    id: 1,
+    name: "Name 1",
+    role: "Role 1",
+    feedback:
+      "This product transformed the way we work. Highly recommend to everyone!",
+  },
+  {
+    id: 2,
+    name: "Name 2",
+    role: "Role 2",
+    feedback:
+      "Amazing experience! The support team is fantastic and the product is top-notch.",
+  },
+  {
+    id: 3,
+    name: "Name 3",
+    role: "Role 3",
+    feedback:
+      "We’ve seen remarkable growth since implementing this solution. Truly a game-changer!",
+  },
 ];
 
-const Testimonials = () => {
-  const [page, setPage] = useState(0);
-  const [cardsPerPage, setCardsPerPage] = useState(3);
+export default function Testimonials() {
+  const scrollContainer = useRef(null);
 
-  useEffect(() => {
-    const updateCardsPerPage = () => {
-      if (window.innerWidth < 768) {
-        setCardsPerPage(1); // mobile → 1 card
-      } else if (window.innerWidth < 1024) {
-        setCardsPerPage(2); // tablet → 2 cards
-      } else {
-        setCardsPerPage(3); // desktop → 3 cards
-      }
-    };
+  const scrollLeft = () => {
+    if (scrollContainer.current) {
+      scrollContainer.current.scrollBy({
+        left: -scrollContainer.current.offsetWidth,
+        behavior: "smooth",
+      });
+    }
+  };
 
-    updateCardsPerPage();
-    window.addEventListener("resize", updateCardsPerPage);
-    return () => window.removeEventListener("resize", updateCardsPerPage);
-  }, []);
-
-  const totalPages = Math.ceil(testimonials.length / cardsPerPage);
-  const startIndex = page * cardsPerPage;
-  const currentTestimonials = testimonials.slice(startIndex, startIndex + cardsPerPage);
-
-  const filledTestimonials = [
-    ...currentTestimonials,
-    ...Array(cardsPerPage - currentTestimonials.length).fill(null),
-  ];
+  const scrollRight = () => {
+    if (scrollContainer.current) {
+      scrollContainer.current.scrollBy({
+        left: scrollContainer.current.offsetWidth,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
-    <section id="testimonials" className="scroll-mt-20 py-10 bg-base-200">
-      <div className="container">
+    <section id="testimonials" className="mt-10 scroll-mt-20 bg-base-200 relative">
+      <div className="container mx-auto px-4 bg-base-200">
+        {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-accent mb-4">Testimonials</h2>
+          <h2 className="text-5xl font-serif text-accent">
+            What Our Clients Say
+          </h2>
+          <p className="text-base-content/70 mt-2">
+            Hear from those who’ve experienced the difference.
+          </p>
         </div>
 
-        {/* Cards Grid */}
-        <div
-          className={`
-            max-w-full mx-auto gap-6
-            ${cardsPerPage === 1 ? "flex justify-center" : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"}
-          `}
-        >
-          {currentTestimonials.map((testimonial) => (
-            <div
-              key={testimonial.id}
-              className={`
-              bg-base-300 rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300
-              ${cardsPerPage === 1 ? "w-full max-w-xl" : "max-w-sm"}
-            `}
-            >
-              <div className="mb-6">
-                <ChatBubbleOvalLeftIcon className="w-12 h-12 text-secondary/60" />
-              </div>
-
-              <blockquote className="text-secondary text-base leading-relaxed mb-6">
-                "{testimonial.content}"
-              </blockquote>
-
-              <div className="border-t pt-4">
-                <cite className="not-italic">
-                  <div className="text-primary font-semibold text-lg">
-                    {testimonial.author}
-                  </div>
-                  {testimonial.role && (
-                    <div className="text-accent text-sm mt-1">{testimonial.role}</div>
-                  )}
-                </cite>
-              </div>
-            </div>
-          ))}
-        </div>
-
-
-        {/* Controls */}
-        <div className="flex justify-center items-center gap-4 mt-8">
+        <div className="relative max-w-4xl mx-auto">
+          {/* Left Button - only desktop */}
           <button
-            onClick={() => setPage((p) => Math.max(p - 1, 0))}
-            disabled={page === 0}
-            className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 disabled:opacity-40 hover:cursor-pointer"
+            onClick={scrollLeft}
+            className="
+              hidden lg:block
+              absolute top-1/2 -translate-y-1/2 
+              -left-12 z-10 bg-base-100 rounded-full p-3 shadow-lg 
+              hover:shadow-xl transition-all duration-200 hover:scale-110 
+              focus:outline-none focus:ring-2 focus:ring-primary
+            "
+            aria-label="Scroll left"
           >
-            <ChevronLeftIcon className="w-6 h-6 text-primary" />
+            <ChevronLeftIcon className="w-6 h-6 text-info-content hover:cursor-pointer" />
           </button>
 
-          <span className="text-secondary font-medium">
-            Page {page + 1} of {totalPages}
-          </span>
-
+          {/* Right Button - only desktop */}
           <button
-            onClick={() => setPage((p) => Math.min(p + 1, totalPages - 1))}
-            disabled={page === totalPages - 1}
-            className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 disabled:opacity-40 hover:cursor-pointer"
+            onClick={scrollRight}
+            className="
+              hidden lg:block
+              absolute top-1/2 -translate-y-1/2 
+              -right-12 z-10 bg-base-100 rounded-full p-3 shadow-lg 
+              hover:shadow-xl transition-all duration-200 hover:scale-110 
+              focus:outline-none focus:ring-2 focus:ring-primary
+            "
+            aria-label="Scroll right"
           >
-            <ChevronRightIcon className="w-6 h-6 text-primary" />
+            <ChevronRightIcon className="w-6 h-6 text-info-content hover:cursor-pointer" />
           </button>
+
+          {/* Scroll Container */}
+          <div
+            ref={scrollContainer}
+            className="flex overflow-x-auto lg:overflow-hidden scrollbar-hide snap-x snap-mandatory scroll-smooth"
+          >
+            {testimonials.map((testimonial) => (
+              <div
+                key={testimonial.id}
+                className="flex-none w-full snap-center bg-base-100 rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-12 hover:shadow-xl transition-shadow duration-300 mx-2"
+              >
+                <div className="flex flex-col items-center text-center">
+                  <p className="text-lg italic text-base-content/80 mb-4">
+                    "{testimonial.feedback}"
+                  </p>
+                  <h4 className="text-xl font-semibold text-base-content">
+                    {testimonial.name}
+                  </h4>
+                  <p className="text-sm text-base-content/60">
+                    {testimonial.role}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default Testimonials;
+}
