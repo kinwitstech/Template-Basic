@@ -75,7 +75,7 @@ export default function Testimonials() {
             "
             aria-label="Scroll left"
           >
-            <ChevronLeftIcon className="w-6 h-6 text-info-content hover:cursor-pointer" />
+            <ChevronLeftIcon className="w-6 h-6 text-white hover:cursor-pointer" />
           </button>
 
           {/* Right Button - only desktop */}
@@ -90,7 +90,7 @@ export default function Testimonials() {
             "
             aria-label="Scroll right"
           >
-            <ChevronRightIcon className="w-6 h-6 text-info-content hover:cursor-pointer" />
+            <ChevronRightIcon className="w-6 h-6 text-white hover:cursor-pointer" />
           </button>
 
           {/* Scroll Container */}

@@ -57,7 +57,7 @@ const FAQ = () => {
           {/* FAQ Items */}
           <div className="lg:col-span-2 space-y-1">
             {faqData.map((item) => (
-              <div key={item.id} className="border-b border-info/2  0">
+              <div key={item.id} className="border-b border-info/20">
                 <button
                   onClick={() => toggleItem(item.id)}
                   className="w-full px-4 py-6 flex items-center justify-between text-left group hover:bg-base-300 transition-colors duration-200"
@@ -81,7 +81,7 @@ const FAQ = () => {
                       : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <div className="text-info/70 font-serif px-6 mt-3 text-lg leading-relaxed pr-12">
+                  <div className="text-neutral-content/70 font-serif px-6 mt-3 text-lg leading-relaxed pr-12">
                     {item.answer}
                   </div>
                 </div>
