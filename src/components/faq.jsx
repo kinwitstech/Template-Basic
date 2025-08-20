@@ -1,109 +1,98 @@
 import React, { useState } from 'react';
-import '../styles/theme.css'
-import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline';
+import { PlusIcon, MinusIcon } from '@heroicons/react/24/outline';
 
-const faqData = [
-  {
-    id: 1,
-    question: "Question 1",
-    answer: "Enter your answer to Question 1 here"  },
-  {
-    id: 2,
-    question: "Question 2",
-    answer: "Enter your answer to Question 2 here"
-  },
-  {
-    id: 3,
-    question: "Question 3",
-    answer: "Enter your answer to Question 3 here"
-  },
-  {
-    id: 4,
-    question: "Question 4",
-    answer: "Enter your answer to Question 4 here"
-  },
-];
+const FAQ = () => {
+  const [openItems, setOpenItems] = useState(new Set());
 
-const FAQAccordion = () => {
-  const [openItems, setOpenItems] = useState(new Set([1])); // First item open by default
+  const faqData = [
+    {
+      id: 1,
+      question: "Question 1",
+      answer: "Answer for Question 1 is entered here"
+    },
+    {
+      id: 2,
+      question: "Question 2",
+      answer: "Answer for Question 2 is entered here"
+    },
+    {
+      id: 3,
+      question: "Question 3",
+      answer: "Answer for Question 3 is entered here"
+    },
+    {
+      id: 4,
+      question: "Question 4",
+      answer: "Answer for Question 4 is entered here"
+    },
+    {
+      id: 5,
+      question: "Question 5",
+      answer: "Answer for Question 5 is entered here"
+    }
+  ];
 
   const toggleItem = (id) => {
-    setOpenItems(prev => {
-      const newSet = new Set(prev);
-      if (newSet.has(id)) {
-        newSet.delete(id);
-      } else {
-        newSet.add(id);
-      }
-      return newSet;
-    });
+    const newOpenItems = new Set(openItems);
+    if (newOpenItems.has(id)) {
+      newOpenItems.delete(id);
+    } else {
+      newOpenItems.add(id);
+    }
+    setOpenItems(newOpenItems);
   };
 
   return (
-    <div className="min-h-screen bg-white p-4 sm:p-6 lg:p-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-blue-500">
-            Frequently Asked
-            <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-purple-500">
-              Questions
-            </span>
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Get answers to the most common questions about our design services and process.
-          </p>
-        </div>
+    <section id="faq" className="container scroll-mt-20 mt-10 sm:mt-15 lg:mt-20 bg-base-200">
+    <div className="bg-base-200 mt-10 px-6">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+          {/* FAQ Title */}
+          <div className="lg:col-span-1">
+            <h1 className="text-4xl md:text-5xl font-serif text-accent leading-none">
+              Frequently Asked Questions
+            </h1>
+          </div>
 
-        <div className="space-y-4">
-          {faqData.map((item) => {
-            const isOpen = openItems.has(item.id);
-            
-            return (
-              <div
-                key={item.id}
-                className="bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden transition-all duration-300 hover:bg-gray-100 shadow-sm hover:shadow-md"
-              >
+          {/* FAQ Items */}
+          <div className="lg:col-span-2 space-y-1">
+            {faqData.map((item) => (
+              <div key={item.id} className="border-b border-info/20">
                 <button
                   onClick={() => toggleItem(item.id)}
-                  className="w-full px-6 sm:px-8 py-6 text-left focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50 transition-all duration-200"
-                  aria-expanded={isOpen}
+                  className="w-full px-4 py-6 flex items-center justify-between text-left group hover:bg-base-300 transition-colors duration-200"
                 >
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-lg sm:text-xl font-semibold text-purple-500 hover:text-pink-500 bg-clip-text pr-4">
-                      {item.question}
-                    </h3>
-                    <div className="flex-shrink-0 ml-4">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center transition-all duration-300 hover:scale-110">
-                        {isOpen ? (
-                          <ChevronUpIcon className="w-5 h-5 text-gray-500" />
-                        ) : (
-                          <ChevronDownIcon className="w-5 h-5 text-gray-500" />
-                        )}
-                      </div>
-                    </div>
+                  <span className="text-lg md:text-xl font-serif text-info font-medium pr-4 group-hover:text-info transition-colors duration-200">
+                    {item.question}
+                  </span>
+                  <div className="flex-shrink-0">
+                    {openItems.has(item.id) ? (
+                      <MinusIcon className="w-8 h-8 text-primary/60 transition-transform duration-200 group-hover:scale-110" />
+                    ) : (
+                      <PlusIcon className="w-8 h-8 text-primary/60 transition-transform duration-200 group-hover:scale-110" />
+                    )}
                   </div>
                 </button>
                 
-                <div
-                  className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                    isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                <div 
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    openItems.has(item.id) 
+                      ? 'max-h-96 opacity-100 pb-6' 
+                      : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <div className="px-6 sm:px-8 pb-6">
-                    <div className="bg-white rounded-xl p-6 border border-gray-200">
-                      <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-                        {item.answer}
-                      </p>
-                    </div>
+                  <div className="text-neutral-content/70 font-serif px-6 mt-3 text-lg leading-relaxed pr-12">
+                    {item.answer}
                   </div>
                 </div>
               </div>
-            );
-          })}
+            ))}
+          </div>
         </div>
       </div>
     </div>
+    </section>
   );
 };
 
-export default FAQAccordion;
+export default FAQ;

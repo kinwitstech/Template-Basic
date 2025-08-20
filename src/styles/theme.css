@@ -14,106 +14,94 @@
   prefersdark: false;
 
   /* Base Colors */
-  --color-base-100: #ffffff;
-  --color-base-200: #f5f5f5;
-  --color-base-300: #e5e5e5;
-  --color-base-content: #222222;
+  --color-base-100: #FFFCF2; /* cream */
+  --color-base-200: #f2eee6;
+  --color-base-300: #e4e0d8;
+  --color-base-content: #252422; /* charcoal for readability */
 
-  /* Brand Colors */
-  --color-primary: #0190cc; /* Navbar & Buttons */
+  /* Core Brand */
+  --color-primary: #EB5E28; /* rustic orange */
   --color-primary-content: #ffffff;
 
-  --color-secondary: #6c757d; /* Secondary buttons/text */
-  --color-secondary-content: #ffffff;
+  --color-secondary: #CCC5B9; /* warm beige */
+  --color-secondary-content: #252422;
 
-  --color-accent: #f43f5e; /* Pink gradient in footer title */
+  --color-accent: #403D39; /* deep taupe-gray */
   --color-accent-content: #ffffff;
 
-  --color-neutral: #111111; /* Footer background */
-  --color-neutral-content: #ffffff;
+  --color-neutral: #252422; /* charcoal */
+  --color-neutral-content: #000000;
 
-  /* Status Colors */
-  --color-info: #3b82f6;
-  --color-info-content: #ffffff;
+  /* Status Colors (still within rustic vibe) */
+  --color-info: #121111;
+  --color-info-content: #252422;
 
-  --color-success: #22c55e;
+  --color-success: #403D39;
   --color-success-content: #ffffff;
 
-  --color-warning: #facc15;
-  --color-warning-content: #000000;
+  --color-warning: #EB5E28;
+  --color-warning-content: #ffffff;
 
-  --color-error: #ef4444;
+  --color-error: #252422;
   --color-error-content: #ffffff;
 
-  /* Radius / Size */
+  /* Minimalist UI */
   --radius-selector: 0.25rem;
   --radius-field: 0.25rem;
   --radius-box: 0.25rem;
-  --size-selector: 0.25rem;
-  --size-field: 0.25rem;
 
   --border: 1px;
   --depth: 0;
   --noise: 0;
 }
 
-/* Dark Theme */
+
 @plugin "daisyui/theme" {
   name: "dark";
   default: false;
   prefersdark: false;
   color-scheme: "dark";
+  --color-base-100: oklch(20% 0.042 265.755);
+  --color-base-200: oklch(13% 0.028 261.692);
+  --color-base-300: oklch(12% 0.042 264.695);
+  --color-base-content: oklch(97.807% 0.029 256.847);
 
-  /* Base Colors */
-  --color-base-100: #111827;
-  --color-base-200: #1f2937;
-  --color-base-300: #374151;
-  --color-base-content: #f3f4f6;
+  --color-primary: oklch(45% 0.24 277.023);
+  --color-primary-content: oklch(93% 0.034 272.788);
 
-  /* Brand Colors */
-  --color-primary: #0190cc; /* Navbar & Buttons */
-  --color-primary-content: #ffffff;
+  --color-secondary: oklch(52% 0.223 3.958);
+  --color-secondary-content: oklch(94% 0.028 342.258);
 
-  --color-secondary: #9ca3af;
-  --color-secondary-content: #111827;
+  --color-accent: oklch(77% 0.152 181.912);
+  --color-accent-content: oklch(38% 0.063 188.416);
 
-  --color-accent: #f43f5e;
-  --color-accent-content: #ffffff;
+  --color-neutral: oklch(14% 0.005 285.823);
+  --color-neutral-content: oklch(92% 0.004 286.32);
 
-  --color-neutral: #0f172a; /* Footer background */
-  --color-neutral-content: #e5e7eb;
+  --color-info: oklch(74% 0.16 232.661);
+  --color-info-content: oklch(29% 0.066 243.157);
 
-  /* Status Colors */
-  --color-info: #60a5fa;
-  --color-info-content: #111827;
+  --color-success: oklch(76% 0.177 163.223);
+  --color-success-content: oklch(37% 0.077 168.94);
 
-  --color-success: #4ade80;
-  --color-success-content: #111827;
+  --color-warning: oklch(82% 0.189 84.429);
+  --color-warning-content: oklch(41% 0.112 45.904);
 
-  --color-warning: #facc15;
-  --color-warning-content: #111827;
+  --color-error: oklch(71% 0.194 13.428);
+  --color-error-content: oklch(27% 0.105 12.094);
 
-  --color-error: #f87171;
-  --color-error-content: #111827;
-
-  /* Radius / Size */
   --radius-selector: 0.5rem;
   --radius-field: 0.25rem;
-  --radius-box: 0;
+  --radius-box: 0.5rem;
   --size-selector: 0.25rem;
   --size-field: 0.25rem;
-
   --border: 1px;
   --depth: 1;
-  --noise: 1;
+  --noise: 0;
 }
 
-/* Shared Theme Variables */
-@theme {
-  --color-primary-dark: #0086c1;
-  --color-secondary-dark: #5a6268;
-  --color-neutral-light: #c5c6cc;
-  --color-neutral-dark: #8f9098;
 
+/* Shared */
+@theme {
   --default-font-family: "Inter", system-ui, sans-serif;
 }
