@@ -57,7 +57,7 @@ export default function Testimonials() {
           <h2 className="text-5xl font-serif text-accent">
             What Our Clients Say
           </h2>
-          <p className="text-base-content/70 mt-2">
+          <p className="font-serif text-base-content/70 mt-2">
             Hear from those who’ve experienced the difference.
           </p>
         </div>
@@ -69,7 +69,7 @@ export default function Testimonials() {
             className="
               hidden lg:block
               absolute top-1/2 -translate-y-1/2 
-              -left-12 z-10 bg-base-100 rounded-full p-3 shadow-lg 
+              -left-12 z-10 bg-gradient-to-r from-primary to-accent rounded-full p-3 shadow-lg 
               hover:shadow-xl transition-all duration-200 hover:scale-110 
               focus:outline-none focus:ring-2 focus:ring-primary
             "
@@ -84,7 +84,7 @@ export default function Testimonials() {
             className="
               hidden lg:block
               absolute top-1/2 -translate-y-1/2 
-              -right-12 z-10 bg-base-100 rounded-full p-3 shadow-lg 
+              -right-12 z-10 bg-gradient-to-r from-primary to-accent rounded-full p-3 shadow-lg 
               hover:shadow-xl transition-all duration-200 hover:scale-110 
               focus:outline-none focus:ring-2 focus:ring-primary
             "
@@ -104,13 +104,13 @@ export default function Testimonials() {
                 className="flex-none w-full snap-center bg-base-100 rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-12 hover:shadow-xl transition-shadow duration-300 mx-2"
               >
                 <div className="flex flex-col items-center text-center">
-                  <p className="text-lg italic text-base-content/80 mb-4">
+                  <p className="text-lg italic font-serif text-base-content/80 mb-4">
                     "{testimonial.feedback}"
                   </p>
-                  <h4 className="text-xl font-semibold text-base-content">
+                  <h4 className="text-xl font-serif font-semibold text-base-content">
                     {testimonial.name}
                   </h4>
-                  <p className="text-sm text-base-content/60">
+                  <p className="text-sm font-serif text-base-content/60">
                     {testimonial.role}
                   </p>
                 </div>
