@@ -53,7 +53,7 @@ const ContactForm = () => {
                   <input
                     type="text"
                     {...register('firstName', { required: 'First name is required' })}
-                    className="w-full pl-10 pr-4 py-3 border border-info-content/40 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent placeholder-neutral-content/70 font-serif "
+                    className="w-full pl-10 pr-4 py-3 border border-info-content/70 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent placeholder-neutral-content/70 font-serif "
                     placeholder="First Name"
                   />
                 </div>
@@ -71,7 +71,7 @@ const ContactForm = () => {
                   <input
                     type="text"
                     {...register('lastName', { required: 'Last name is required' })}
-                    className="w-full pl-10 pr-4 py-3 border border-info-content/40 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent placeholder-neutral-content/70 font-serif "
+                    className="w-full pl-10 pr-4 py-3 border border-info-content/70 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent placeholder-neutral-content/70 font-serif "
                     placeholder="Last Name"
                   />
                 </div>
@@ -98,7 +98,7 @@ const ContactForm = () => {
                         message: 'Invalid email address'
                       }
                     })}
-                    className="w-full pl-10 pr-4 py-3 border border-info-content/40 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent placeholder-neutral-content/70 font-serif"
+                    className="w-full pl-10 pr-4 py-3 border border-info-content/70 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent placeholder-neutral-content/70 font-serif"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -116,7 +116,7 @@ const ContactForm = () => {
                   <input
                     type="text"
                     {...register('subject', { required: 'Subject is required' })}
-                    className="w-full pl-10 pr-4 py-3 border border-info-content/40 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent placeholder-neutral-content/70 font-serif "
+                    className="w-full pl-10 pr-4 py-3 border border-info-content/70 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent placeholder-neutral-content/70 font-serif "
                     placeholder="Subject"
                   />
                 </div>
@@ -136,7 +136,7 @@ const ContactForm = () => {
                   <textarea
                     {...register('message', { required: 'Message is required' })}
                     rows="6"
-                    className="w-full px-4 py-3 border border-info-content/40 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent placeholder-neutral-content/70 font-serif "
+                    className="w-full px-4 py-3 border border-info-content/70 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent placeholder-neutral-content/70 font-serif "
                     placeholder="Type your message here..."
                   ></textarea>
                   {errors.message && (
@@ -150,7 +150,7 @@ const ContactForm = () => {
             <div className="col-span-1 md:col-span-3 flex justify-center">
               <button
                 type="submit"
-                className="bg-gradient-to-r from-primary to-accent text-white py-2 px-8 font-serif rounded-xl text-lg hover:shadow-lg hover:scale-105 hover:cursor-pointer"
+                className="bg-gradient-to-r from-primary to-accent text-white py-2 px-8 font-serif rounded-2xl text-lg hover:shadow-lg hover:scale-105 hover:cursor-pointer"
               >
                 Submit
               </button>

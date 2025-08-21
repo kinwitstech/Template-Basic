@@ -50,7 +50,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="font-serif text-neutral-content/70 transition-colors duration-300 hover:text-white">
+                  <a href={link.href} className="font-serif text-neutral-content/60 transition-colors duration-300 hover:text-neutral-content">
                     {link.name}
                   </a>
                 </li>
@@ -64,7 +64,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="font-serif text-neutral-content/70 transition-colors duration-300 hover:text-white">
+                  <a href={link.href} className="font-serif text-neutral-content/60 transition-colors duration-300 hover:text-neutral-content">
                     {link.name}
                   </a>
                 </li>
@@ -78,7 +78,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="font-serif text-neutral-content/70 transition-colors duration-300 hover:text-white">
+                  <a href={link.href} className="font-serif text-neutral-content/60 transition-colors duration-300 hover:text-neutral-content">
                     {link.name}
                   </a>
                 </li>
@@ -93,10 +93,10 @@ export default function Footer() {
               © {new Date().getFullYear()} Kinwits. All rights reserved.
             </p>
             <div className="flex mt-4 space-x-6 md:mt-0">
-              <a href="#" className="text-sm font-serif text-neutral-content/70 transition-colors duration-300 hover:text-white">
+              <a href="#" className="text-sm font-serif text-neutral-content/60 transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-sm font-serif text-neutral-content/70 transition-colors duration-300 hover:text-white">
+              <a href="#" className="text-sm font-serif text-neutral-content/60 transition-colors">
                 Terms of Service
               </a>
             </div>

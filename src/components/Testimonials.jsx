@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
@@ -30,27 +30,36 @@ const testimonials = [
 
 export default function Testimonials() {
   const scrollContainer = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const scrollLeft = () => {
+  const scrollToIndex = (index) => {
     if (scrollContainer.current) {
-      scrollContainer.current.scrollBy({
-        left: -scrollContainer.current.offsetWidth,
+      scrollContainer.current.scrollTo({
+        left: scrollContainer.current.offsetWidth * index,
         behavior: "smooth",
       });
     }
+  };
+
+  const scrollLeft = () => {
+    const newIndex =
+      currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+    scrollToIndex(newIndex);
   };
 
   const scrollRight = () => {
-    if (scrollContainer.current) {
-      scrollContainer.current.scrollBy({
-        left: scrollContainer.current.offsetWidth,
-        behavior: "smooth",
-      });
-    }
+    const newIndex =
+      currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+    scrollToIndex(newIndex);
   };
 
   return (
-    <section id="testimonials" className="container scroll-mt-20 mt-10 sm:mt-15 lg:mt-20 bg-base-200">
+    <section
+      id="testimonials"
+      className="container scroll-mt-20 mt-10 sm:mt-15 lg:mt-20 bg-base-200"
+    >
       <div className="container mx-auto px-4 bg-base-200">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -96,7 +105,7 @@ export default function Testimonials() {
           {/* Scroll Container */}
           <div
             ref={scrollContainer}
-            className="flex overflow-x-auto lg:overflow-hidden scrollbar-hide snap-x snap-mandatory scroll-smooth"
+            className="flex overflow-x-hidden snap-x snap-mandatory scroll-smooth"
           >
             {testimonials.map((testimonial) => (
               <div

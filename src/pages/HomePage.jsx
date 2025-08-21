@@ -44,7 +44,7 @@ const HomePage = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed z-50 p-3 text-white opacity-70 bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:opacity-100 hover:cursor-pointer rounded-full bottom-8 right-8"
+          className="fixed z-50 p-3 text-white opacity-70 bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:opacity-100 hover:cursor-pointer hover:scale-110 rounded-full bottom-8 right-8"
           aria-label="Scroll to top"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
