@@ -58,51 +58,45 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="container scroll-mt-20 mt-10 sm:mt-15 lg:mt-20 bg-base-200"
+      className="container scroll-mt-20 mt-10 sm:mt-15 lg:mt-20 bg-base-100"
     >
-      <div className="container mx-auto px-4 bg-base-200">
-        {/* Section Header */}
+      <div className="container mx-auto px-4 bg-base-100">
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-serif text-accent">
+          <h1 className="text-accent">
             What Our Clients Say
-          </h2>
-          <p className="font-serif text-base-content/70 mt-2">
+          </h1>
+          <p className="text-base-content/70 mt-2">
             Hear from those who’ve experienced the difference.
           </p>
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          {/* Left Button - only desktop */}
           <button
             onClick={scrollLeft}
             className="
               hidden lg:block
               absolute top-1/2 -translate-y-1/2 
-              -left-12 z-10 bg-gradient-to-r from-primary to-accent rounded-full p-3 shadow-lg 
-              hover:shadow-xl transition-all duration-200 hover:scale-110 
-              focus:outline-none focus:ring-2 focus:ring-primary
+              -left-12 z-10 bg-gradient-to-r from-primary to-accent rounded-full p-3
+              transition-all duration-200 hover:scale-110 
             "
             aria-label="Scroll left"
           >
-            <ChevronLeftIcon className="w-6 h-6 text-white hover:cursor-pointer" />
+            <ChevronLeftIcon className="w-6 h-6 text-white" />
           </button>
 
-          {/* Right Button - only desktop */}
           <button
             onClick={scrollRight}
             className="
               hidden lg:block
               absolute top-1/2 -translate-y-1/2 
-              -right-12 z-10 bg-gradient-to-r from-primary to-accent rounded-full p-3 shadow-lg 
-              hover:shadow-xl transition-all duration-200 hover:scale-110 
-              focus:outline-none focus:ring-2 focus:ring-primary
+              -right-12 z-10 bg-gradient-to-r from-primary to-accent rounded-full p-3
+              transition-all duration-200 hover:scale-110 
             "
             aria-label="Scroll right"
           >
-            <ChevronRightIcon className="w-6 h-6 text-white hover:cursor-pointer" />
+            <ChevronRightIcon className="w-6 h-6 text-white" />
           </button>
 
-          {/* Scroll Container */}
           <div
             ref={scrollContainer}
             className="flex overflow-x-hidden snap-x snap-mandatory scroll-smooth"
@@ -110,18 +104,18 @@ export default function Testimonials() {
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.id}
-                className="flex-none w-full snap-center bg-base-100 rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-12 hover:shadow-xl transition-shadow duration-300 mx-2"
+                className="flex-none w-full snap-center bg-base-200 rounded-2xl shadow-md p-6 sm:p-8 md:p-10 lg:p-12 hover:shadow-xl transition-shadow duration-300 mb-5"
               >
                 <div className="flex flex-col items-center text-center">
-                  <p className="text-lg italic font-serif text-base-content/80 mb-4">
+                  <p className="italic text-base-content/80 mb-4">
                     "{testimonial.feedback}"
                   </p>
-                  <h4 className="text-xl font-serif font-semibold text-base-content">
+                  <h5 className="font-semibold text-base-content">
                     {testimonial.name}
-                  </h4>
-                  <p className="text-sm font-serif text-base-content/60">
+                  </h5>
+                  <h6 className="text-base-content/60">
                     {testimonial.role}
-                  </p>
+                  </h6>
                 </div>
               </div>
             ))}

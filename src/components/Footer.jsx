@@ -1,4 +1,9 @@
 import { GlobeAltIcon } from '@heroicons/react/24/outline'
+import {
+  MapPinIcon,
+  PhoneIcon,
+  EnvelopeIcon,
+} from '@heroicons/react/24/outline';
 
 const footerLinks = {
   company: [
@@ -33,20 +38,41 @@ export default function Footer() {
     <footer className="text-info bg-base-100">
       <div className="container py-10">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {/* Company Info */}
           <div className="col-span-1 lg:col-span-2">
-            <h3 className="mb-4 text-2xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary/90 to-accent/90">
+            <h3 className="mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary/90 to-accent/90">
               Kinwits
             </h3>
-            <p className="max-w-md mb-6 font-serif text-neutral-content">
-              Transform your digital presence with our innovative solutions. 
-              We help businesses grow and succeed in the digital age.
-            </p>
-          </div>
+              <div className="flex items-start">
+                <MapPinIcon className="h-5 w-5 mt-1 mr-3 flex-shrink-0" />
+                <div>
+                  <p classname="text-neutral-content/70">ADDRESS</p>
+                  <p className="text-sm text-neutral-content/70">
+                    Janatha Fishnet Private Limited S No.154/2 & 175,<br />
+                    Dabbekatte Kedoor Road Dabbekatte, Korgi<br />
+                    Kundapura Udupi, Karnataka, 576231
+                  </p>
+                </div>
+              </div>
 
-          {/* Company Links */}
+              <div className="flex items-start mt-2">
+                <PhoneIcon className="h-5 w-5 mt-1 mr-3 flex-shrink-0" />
+                <div>
+                  <p classname="text-neutral-content/70">PHONE</p>
+                  <p className="text-sm text-neutral-content/70">08254-295061</p>
+                </div>
+              </div>
+
+              <div className="flex items-start mt-2">
+                <EnvelopeIcon className="h-5 w-5 mt-1 mr-3 flex-shrink-0" />
+                <div>
+                  <p classname="text-neutral-content">EMAIL</p>
+                  <p className="text-sm text-neutral-content/70">bdo@janathafishnet.com</p>
+                </div>
+              </div>
+            </div>
+
           <div className="order-1 md:order-1">
-            <h4 className="mb-4 text-lg font-serif font-semibold">Company</h4>
+            <h5 className="mb-4 font-semibold">Company</h5>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
@@ -58,23 +84,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
           <div className="order-2 md:order-3">
-            <h4 className="mb-4 text-lg font-serif font-semibold">Services</h4>
-            <ul className="space-y-2">
-              {footerLinks.services.map((link) => (
-                <li key={link.name}>
-                  <a href={link.href} className="font-serif text-neutral-content/60 transition-colors duration-300 hover:text-neutral-content">
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div className="order-3 md:order-2">
-            <h4 className="mb-4 text-lg font-serif font-semibold">Support</h4>
+            <h5 className="mb-4 font-semibold">Support</h5>
             <ul className="space-y-2">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
@@ -89,14 +100,14 @@ export default function Footer() {
 
         <div className="pt-8 mt-12 border-t border-info-content/50">
           <div className="flex flex-col items-center justify-between md:flex-row">
-            <p className="text-sm font-serif text-neutral-content/70">
+            <p className="text-sm text-neutral-content/70">
               © {new Date().getFullYear()} Kinwits. All rights reserved.
             </p>
             <div className="flex mt-4 space-x-6 md:mt-0">
-              <a href="#" className="text-sm font-serif text-neutral-content/60 transition-colors">
+              <a href="#" className="text-sm text-neutral-content/70 transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-sm font-serif text-neutral-content/60 transition-colors">
+              <a href="#" className="text-sm text-neutral-content/70 transition-colors">
                 Terms of Service
               </a>
             </div>

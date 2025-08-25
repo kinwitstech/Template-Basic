@@ -24,7 +24,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-base-200">
+    <div className="min-h-screen bg-base-100">
       <Navbar />
       
       <Jumbotron />
@@ -33,7 +33,7 @@ const HomePage = () => {
 
       <Products />
 
-      <FAQ />
+      {/* <FAQ /> */}
 
       <Testimonials />
 
