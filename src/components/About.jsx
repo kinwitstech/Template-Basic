@@ -5,7 +5,7 @@ export default function About() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section id="about" className="container scroll-mt-20 mt-10 sm:mt-15 lg:mt-20 bg-base-100">
+    <section id="about" className="container scroll-mt-20 p-10 bg-base-100">
       <div className="flex flex-col items-stretch gap-8 lg:flex-row">
         <div className="lg:w-1/2">
           <div className="space-y-4">

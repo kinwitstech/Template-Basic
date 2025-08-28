@@ -58,7 +58,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="container scroll-mt-20 mt-10 sm:mt-15 lg:mt-20 bg-base-100"
+      className="container scroll-mt-20 mb-10 mt-10 lg:mt-15 bg-base-100"
     >
       <div className="container mx-auto px-4 bg-base-100">
         <div className="text-center mb-12">
@@ -76,7 +76,7 @@ export default function Testimonials() {
             className="
               hidden lg:block
               absolute top-1/2 -translate-y-1/2 
-              -left-12 z-10 bg-gradient-to-r from-primary to-accent rounded-full p-3
+              -left-12 z-10 bg-gradient-to-r from-primary to-accent shadow-xl rounded-full p-3
               transition-all duration-200 hover:scale-110 
             "
             aria-label="Scroll left"
@@ -89,7 +89,7 @@ export default function Testimonials() {
             className="
               hidden lg:block
               absolute top-1/2 -translate-y-1/2 
-              -right-12 z-10 bg-gradient-to-r from-primary to-accent rounded-full p-3
+              -right-12 z-10 bg-gradient-to-r from-primary to-accent shadow-xl rounded-full p-3
               transition-all duration-200 hover:scale-110 
             "
             aria-label="Scroll right"

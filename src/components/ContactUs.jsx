@@ -17,7 +17,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="container scroll-mt-15 py-10 sm:py-15 lg:py-20 bg-base-200">
+    <section id="contact" className="w-full scroll-mt-15 p-10 bg-base-200">
       <div className="container px-4 lg:px-40">
           <div className="text-center mb-12">
             <h1 className="text-accent mb-4">

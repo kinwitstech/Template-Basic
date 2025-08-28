@@ -36,7 +36,7 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="text-info bg-base-100">
-      <div className="container py-10">
+      <div className="container p-10">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="col-span-1 lg:col-span-2">
             <h3 className="mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary/90 to-accent/90">
@@ -47,9 +47,9 @@ export default function Footer() {
                 <div>
                   <p classname="text-neutral-content/70">ADDRESS</p>
                   <p className="text-sm text-neutral-content/70">
-                    Janatha Fishnet Private Limited S No.154/2 & 175,<br />
-                    Dabbekatte Kedoor Road Dabbekatte, Korgi<br />
-                    Kundapura Udupi, Karnataka, 576231
+                    Shivam Tower, 1st floor <br/>
+                    Kota, Udupi District, KA <br/>
+                    INDIA - 576221
                   </p>
                 </div>
               </div>
@@ -58,7 +58,7 @@ export default function Footer() {
                 <PhoneIcon className="h-5 w-5 mt-1 mr-3 flex-shrink-0" />
                 <div>
                   <p classname="text-neutral-content/70">PHONE</p>
-                  <p className="text-sm text-neutral-content/70">08254-295061</p>
+                  <p className="text-sm text-neutral-content/70">01234-56789</p>
                 </div>
               </div>
 
@@ -66,7 +66,7 @@ export default function Footer() {
                 <EnvelopeIcon className="h-5 w-5 mt-1 mr-3 flex-shrink-0" />
                 <div>
                   <p classname="text-neutral-content">EMAIL</p>
-                  <p className="text-sm text-neutral-content/70">bdo@janathafishnet.com</p>
+                  <p className="text-sm text-neutral-content/70">info@kinwits.com</p>
                 </div>
               </div>
             </div>
