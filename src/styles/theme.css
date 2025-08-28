@@ -14,9 +14,9 @@
   prefersdark: false;
 
   /* Base Colors */
-  --color-base-100: #FFFCF2; /* cream */
-  --color-base-200: #f2eee6;
-  --color-base-300: #e4e0d8;
+  --color-base-100: #FFFFFF; /* cream */
+  --color-base-200: #f7f7f5;
+  --color-base-300: #f2f2e6;
   --color-base-content: #252422; /* charcoal for readability */
 
   /* Core Brand */
