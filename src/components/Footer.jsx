@@ -40,7 +40,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="col-span-1 lg:col-span-2">
             <h3 className="mb-4 text-transparent bg-clip-text bg-primary">
-              Kinwits
+              <span className="text-primary">Kin</span>
+              <span className="text-secondary">wits</span>
             </h3>
               <div className="flex items-start">
                 <MapPinIcon className="h-5 w-5 mt-1 mr-3 flex-shrink-0" />

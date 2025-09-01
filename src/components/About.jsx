@@ -1,5 +1,5 @@
 import { useState } from "react";
-import aboutImage from "../assets/60241.jpg";
+import aboutImage from "../assets/about.jpg";
 
 export default function About() {
   const [isOpen, setIsOpen] = useState(false);

@@ -7,6 +7,7 @@ import FAQ from '../components/faq';
 import Testimonials from '../components/Testimonials';
 import ContactUs from '../components/ContactUs';
 import Products from '../components/Products';
+import StripSection from '../components/Strip';
 
 const HomePage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,6 +33,8 @@ const HomePage = () => {
       <About />
 
       <Products />
+
+      <StripSection />
 
       {/* <FAQ /> */}
 

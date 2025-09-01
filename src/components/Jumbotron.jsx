@@ -1,15 +1,15 @@
-import aboutImage from "../assets/60241.jpg";
+import aboutImage from "../assets/pic.jpg";
 
 export default function Jumbotron() {
   return (
     <section
       id="home"
-      className="relative w-full h-screen text-center bg-secondary/10 bg-cover bg-center"
+      className="relative w-full h-screen text-center bg-cover bg-center"
       style={{
         backgroundImage: `url(${aboutImage})`,
       }}
     >
-      <div className="absolute inset-0 bg-black opacity-40"></div>
+      <div className="absolute inset-0 bg-black opacity-60"></div>
 
       <div className="container relative h-full flex flex-col sm:items-center justify-center">
         <h2 className="mb-4 text-white">CREATIVE DESIGN</h2>
