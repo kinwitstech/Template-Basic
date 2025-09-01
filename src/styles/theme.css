@@ -20,10 +20,10 @@
   --color-base-content: #252422; /* charcoal for readability */
 
   /* Core Brand */
-  --color-primary: #EB5E28; /* rustic orange */
+  --color-primary: #120d3d; 
   --color-primary-content: #ffffff;
 
-  --color-secondary: #CCC5B9; /* warm beige */
+  --color-secondary: #fc8803; 
   --color-secondary-content: #252422;
 
   --color-accent: #403D39; /* deep taupe-gray */

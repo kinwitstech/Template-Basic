@@ -20,7 +20,7 @@ const ContactForm = () => {
     <section id="contact" className="w-full scroll-mt-15 p-10 bg-base-200">
       <div className="container px-4 lg:px-40">
           <div className="text-center mb-12">
-            <h1 className="text-accent mb-4">
+            <h1 className="text-primary mb-4">
               Contact Me
             </h1>
             <div className="flex-center mb-6">
@@ -129,7 +129,7 @@ const ContactForm = () => {
             <div className="col-span-1 md:col-span-3 flex justify-center">
               <button
                 type="submit"
-                className="bg-gradient-to-r from-primary to-accent text-white py-2 px-8 hover:scale-110"
+                className="bg-secondary text-white py-2 px-8 hover:scale-110"
               >
                 Submit
               </button>

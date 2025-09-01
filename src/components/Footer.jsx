@@ -39,7 +39,7 @@ export default function Footer() {
       <div className="container p-10">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="col-span-1 lg:col-span-2">
-            <h3 className="mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary/90 to-accent/90">
+            <h3 className="mb-4 text-transparent bg-clip-text bg-primary">
               Kinwits
             </h3>
               <div className="flex items-start">
@@ -76,7 +76,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="font-serif text-neutral-content/60 transition-colors duration-300 hover:text-neutral-content">
+                  <a href={link.href} className="text-neutral-content/60 transition-colors duration-300 hover:text-neutral-content">
                     {link.name}
                   </a>
                 </li>
@@ -89,7 +89,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="font-serif text-neutral-content/60 transition-colors duration-300 hover:text-neutral-content">
+                  <a href={link.href} className="text-neutral-content/60 transition-colors duration-300 hover:text-neutral-content">
                     {link.name}
                   </a>
                 </li>

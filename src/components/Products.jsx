@@ -91,7 +91,7 @@ function Products() {
       <div className="max-w-screen-xl mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-10">
-          <h1 className="text-accent mb-4">Our Products</h1>
+          <h1 className="text-primary mb-4">Our Products</h1>
         </div>
 
         {/* Products Grid */}
@@ -146,14 +146,14 @@ function Products() {
             {!allVisible ? (
               <button
                 onClick={handleShowMore}
-                className="px-6 py-2 bg-gradient-to-r from-primary to-accent text-white rounded-lg"
+                className="px-6 py-2 bg-secondary text-white rounded-lg"
               >
                 Show More
               </button>
             ) : (
               <button
                 onClick={handleShowLess}
-                className="px-6 py-2 bg-gradient-to-r from-primary to-accent text-white rounded-lg"
+                className="px-6 py-2 bg-secondary text-white rounded-lg"
               >
                 Show Less
               </button>

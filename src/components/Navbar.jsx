@@ -39,9 +39,10 @@ export default function Navbar() {
       <div className="flex items-center justify-between h-16">
         <a
           href="#home"
-          className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent"
+          className="text-2xl font-bold text-transparent bg-clip-text bg-primary"
         >
-          Kinwits
+          <span className="text-primary">Kin</span>
+          <span className="text-secondary">wits</span>
         </a>
 
         <div className="hidden md:flex items-center space-x-6">
@@ -66,7 +67,7 @@ export default function Navbar() {
             <MoonIcon className="swap-off w-5 h-5 text-yellow-400" />
           </label>
 
-          <button className="px-6 py-2 text-sm text-white bg-gradient-to-r from-primary to-accent">
+          <button className="px-6 py-2 text-sm text-white bg-secondary">
             Get Started
           </button>
         </div>
@@ -118,7 +119,7 @@ export default function Navbar() {
           </a>
         ))}
         <div classname ="mt-auto flex justify-center">
-        <button className="px-6 py-2 bg-gradient-to-r from-primary to-accent text-white">
+        <button className="px-6 py-2 bg-secondary text-white">
           Get Started
         </button>
         </div>

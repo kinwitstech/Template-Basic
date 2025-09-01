@@ -5,7 +5,7 @@ export default function About() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section id="about" className="container scroll-mt-20 p-10 bg-base-100">
+    <section id="about" className="container scroll-mt-15 p-10 bg-base-100">
       <div className="flex flex-col items-stretch gap-8 lg:flex-row">
         <div className="lg:w-1/2">
           <div className="space-y-4">
@@ -14,7 +14,7 @@ export default function About() {
             </span>
             <h2 className="text-primary">
               Crafting Digital Experiences <br />
-              <span className="text-accent">that inspire</span>
+              <span className="text-secondary">that inspire</span>
             </h2>
             <p className="text-neutral-content/70">
               At Kinwits, we don’t just build websites – we create powerful,
@@ -28,7 +28,7 @@ export default function About() {
 
             <button
               onClick={() => setIsOpen(true)}
-              className="inline-block px-6 py-2 text-white bg-gradient-to-r from-primary to-accent hover:scale-110"
+              className="inline-block px-6 py-2 text-white bg-secondary hover:scale-110"
             >
               Read More
             </button>
@@ -72,7 +72,7 @@ export default function About() {
 
             <div className="modal-action">
               <button
-                className="px-6 py-2 text-white bg-gradient-to-r from-primary to-accent hover:scale-110" 
+                className="px-6 py-2 text-white bg-secondary hover:scale-110" 
                 onClick={() => setIsOpen(false)}
               >
                 Close
