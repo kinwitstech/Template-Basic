@@ -6,43 +6,37 @@ const galleryItems = [
   {
     id: 1,
     title: "PRODUCT 1",
-    image:
-      "https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+    image: "https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
     description: "Product 1 description",
   },
   {
     id: 2,
     title: "PRODUCT 2",
-    image:
-      "https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop",
+    image: "https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop",
     description: "Product 2 description",
   },
   {
     id: 3,
     title: "PRODUCT 3",
-    image:
-      "https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    image: "https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
     description: "Product 3 description",
   },
   {
     id: 4,
     title: "PRODUCT 4",
-    image:
-      "https://images.pexels.com/photos/934070/pexels-photo-934070.jpeg?auto=compress&cs=tinysrgb&w=800&h=700&fit=crop",
+    image: "https://images.pexels.com/photos/934070/pexels-photo-934070.jpeg?auto=compress&cs=tinysrgb&w=800&h=700&fit=crop",
     description: "Product 4 description",
   },
   {
     id: 5,
     title: "PRODUCT 5",
-    image:
-      "https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+    image: "https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
     description: "Product 5 description",
   },
   {
     id: 6,
     title: "PRODUCT 6",
-    image:
-      "https://images.pexels.com/photos/1070945/pexels-photo-1070945.jpeg?auto=compress&cs=tinysrgb&w=800&h=650&fit=crop",
+    image: "https://images.pexels.com/photos/1070945/pexels-photo-1070945.jpeg?auto=compress&cs=tinysrgb&w=800&h=650&fit=crop",
     description: "Product 6 description",
   },
 ];
@@ -89,12 +83,10 @@ function Products() {
       className="w-full scroll-mt-15 bg-base-200 p-10 md:p-10"
     >
       <div className="max-w-screen-xl mx-auto px-4">
-        {/* Section Title */}
         <div className="text-center mb-10">
           <h1 className="text-primary mb-4">Our Products</h1>
         </div>
 
-        {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {galleryItems.slice(0, visibleCount).map((item) => (
             <div
@@ -140,20 +132,19 @@ function Products() {
           ))}
         </div>
 
-        {/* Show More / Show Less Button */}
         {galleryItems.length > initialLimit && (
           <div className="flex justify-center mt-8">
             {!allVisible ? (
               <button
                 onClick={handleShowMore}
-                className="px-6 py-2 bg-secondary text-white rounded-lg"
+                className="px-6 py-2 bg-secondary text-white rounded-2xl"
               >
                 Show More
               </button>
             ) : (
               <button
                 onClick={handleShowLess}
-                className="px-6 py-2 bg-secondary text-white rounded-lg"
+                className="px-6 py-2 bg-secondary text-white rounded-2xl"
               >
                 Show Less
               </button>
@@ -161,7 +152,6 @@ function Products() {
           </div>
         )}
 
-        {/* Modal */}
         {selectedItem && (
           <div
             className="fixed inset-0 bg-black/70 backdrop-blur-sm flex justify-center items-center z-50"

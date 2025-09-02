@@ -3,7 +3,6 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Jumbotron from '../components/Jumbotron';
 import About from '../components/About';
-import FAQ from '../components/faq';
 import Testimonials from '../components/Testimonials';
 import ContactUs from '../components/ContactUs';
 import Products from '../components/Products';
@@ -35,8 +34,6 @@ const HomePage = () => {
       <Products />
 
       <StripSection />
-
-      {/* <FAQ /> */}
 
       <Testimonials />
 

@@ -33,7 +33,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="container scroll-mt-25 mb-10 mt-10 lg:mt-15 bg-base-100"
+      className="container scroll-mt-30 mb-10 mt-10 lg:my-20 bg-base-100"
     >
       <div className="container mx-auto px-4 bg-base-100">
         <div className="text-center mb-12">
@@ -44,7 +44,6 @@ export default function Testimonials() {
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          {/* Swiper */}
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             slidesPerView={1}
@@ -62,7 +61,7 @@ export default function Testimonials() {
           >
             {testimonials.map((testimonial) => (
               <SwiperSlide key={testimonial.id}>
-                <div className="bg-base-200 rounded-2xl shadow-md p-6 sm:p-8 md:p-10 lg:p-12 hover:shadow-xl transition-shadow duration-300">
+                <div className="bg-base-200 rounded-2xl shadow-md p-6 sm:p-8 md:p-10 lg:p-20 hover:shadow-xl transition-shadow duration-300">
                   <div className="flex flex-col items-center text-center">
                     <p className="italic text-base-content/80 mb-4">
                       "{testimonial.feedback}"

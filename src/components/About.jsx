@@ -5,11 +5,11 @@ export default function About() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section id="about" className="container scroll-mt-15 p-10 bg-base-100">
+    <section id="about" className="container scroll-mt-10 p-10 lg:py-20 bg-base-100">
       <div className="flex flex-col items-stretch gap-8 lg:flex-row">
         <div className="lg:w-1/2">
           <div className="space-y-4">
-            <span className="text-sm font-serif tracking-wide text-info">
+            <span className="text-sm font-semibold tracking-wide text-info">
               OUR STORY
             </span>
             <h2 className="text-primary">
@@ -25,7 +25,6 @@ export default function About() {
               Founded in 2023, Kinwits is a creative technology company driven by
               the vision of making digital innovation accessible to all.
             </p>
-
             <button
               onClick={() => setIsOpen(true)}
               className="inline-block px-6 py-2 text-white bg-secondary hover:scale-110"
@@ -34,7 +33,6 @@ export default function About() {
             </button>
           </div>
         </div>
-
         <div className="lg:w-1/2">
           <img
             src={aboutImage}
@@ -42,26 +40,25 @@ export default function About() {
           />
         </div>
       </div>
-
       {isOpen && (
         <dialog id="about-modal" className="modal modal-open">
           <div className="modal-box max-w-3xl">
             <h3 className="text-primary mb-4">
               Crafting Digital Experiences that inspire
             </h3>
-            <p className="text-neutral-content/70 mb-4">
+            <p className="text-neutral-content/70 mb-4 text-justify">
               At Kinwits, we don’t just build websites – we create powerful,
               tailored digital solutions that help businesses thrive in the
               modern world.
             </p>
-            <p className="text-neutral-content/70 mb-4">
+            <p className="text-neutral-content/70 mb-4 text-justify">
               Founded in 2023, Kinwits is a creative technology company driven by
               the vision of making digital innovation accessible to all. We
               specialize in designing engaging user experiences, developing
               high-performance web applications, and delivering solutions that
               are as functional as they are beautiful.
             </p>
-            <p className="text-neutral-content/70">
+            <p className="text-neutral-content/70 text-justify">
               Our passionate team blends creativity, strategy, and technology to
               help brands stand out, connect with their audience, and grow in an
               ever-evolving marketplace. We believe in a collaborative approach,
@@ -69,7 +66,6 @@ export default function About() {
               of our clients. Whether it’s startups or enterprises, we’re here to
               turn ideas into impactful digital realities.
             </p>
-
             <div className="modal-action">
               <button
                 className="px-6 py-2 text-white bg-secondary hover:scale-110" 

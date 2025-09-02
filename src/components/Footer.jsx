@@ -35,19 +35,19 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="text-info bg-base-100">
+    <footer className="text-info bg-primary">
       <div className="container p-10">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="col-span-1 lg:col-span-2">
             <h3 className="mb-4 text-transparent bg-clip-text bg-primary">
-              <span className="text-primary">Kin</span>
+              <span className="text-primary-content">Kin</span>
               <span className="text-secondary">wits</span>
             </h3>
               <div className="flex items-start">
-                <MapPinIcon className="h-5 w-5 mt-1 mr-3 flex-shrink-0" />
+                <MapPinIcon className="h-5 w-5 mt-1 mr-3 flex-shrink-0 text-primary-content" />
                 <div>
-                  <p classname="text-neutral-content/70">ADDRESS</p>
-                  <p className="text-sm text-neutral-content/70">
+                  <p className="text-primary-content">ADDRESS</p>
+                  <p className="text-sm text-primary-content/70">
                     Shivam Tower, 1st floor <br/>
                     Kota, Udupi District, KA <br/>
                     INDIA - 576221
@@ -56,28 +56,28 @@ export default function Footer() {
               </div>
 
               <div className="flex items-start mt-2">
-                <PhoneIcon className="h-5 w-5 mt-1 mr-3 flex-shrink-0" />
+                <PhoneIcon className="h-5 w-5 mt-1 mr-3 flex-shrink-0 text-primary-content" />
                 <div>
-                  <p classname="text-neutral-content/70">PHONE</p>
-                  <p className="text-sm text-neutral-content/70">01234-56789</p>
+                  <p className="text-primary-content">PHONE</p>
+                  <p className="text-sm text-primary-content/70">01234-56789</p>
                 </div>
               </div>
 
               <div className="flex items-start mt-2">
-                <EnvelopeIcon className="h-5 w-5 mt-1 mr-3 flex-shrink-0" />
+                <EnvelopeIcon className="h-5 w-5 mt-1 mr-3 flex-shrink-0 text-primary-content" />
                 <div>
-                  <p classname="text-neutral-content">EMAIL</p>
-                  <p className="text-sm text-neutral-content/70">info@kinwits.com</p>
+                  <p className="text-primary-content">EMAIL</p>
+                  <p className="text-sm text-primary-content/70">info@kinwits.com</p>
                 </div>
               </div>
             </div>
 
           <div className="order-1 md:order-1">
-            <h5 className="mb-4 font-semibold">Company</h5>
+            <h5 className="mb-4 font-semibold text-primary-content">Company</h5>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="text-neutral-content/60 transition-colors duration-300 hover:text-neutral-content">
+                  <a href={link.href} className="text-primary-content/60 transition-colors duration-300 hover:text-primary-content">
                     {link.name}
                   </a>
                 </li>
@@ -86,11 +86,11 @@ export default function Footer() {
           </div>
 
           <div className="order-2 md:order-3">
-            <h5 className="mb-4 font-semibold">Support</h5>
+            <h5 className="mb-4 font-semibold text-primary-content">Support</h5>
             <ul className="space-y-2">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="text-neutral-content/60 transition-colors duration-300 hover:text-neutral-content">
+                  <a href={link.href} className="text-primary-content/60 transition-colors duration-300 hover:text-primary-content">
                     {link.name}
                   </a>
                 </li>
@@ -101,14 +101,14 @@ export default function Footer() {
 
         <div className="pt-8 mt-12 border-t border-info-content/50">
           <div className="flex flex-col items-center justify-between md:flex-row">
-            <p className="text-sm text-neutral-content/70">
+            <p className="text-sm text-primary-content/70">
               © {new Date().getFullYear()} Kinwits. All rights reserved.
             </p>
             <div className="flex mt-4 space-x-6 md:mt-0">
-              <a href="#" className="text-sm text-neutral-content/70 transition-colors">
+              <a href="#" className="text-sm text-primary-content/70 transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-sm text-neutral-content/70 transition-colors">
+              <a href="#" className="text-sm text-primary-content/70 transition-colors">
                 Terms of Service
               </a>
             </div>

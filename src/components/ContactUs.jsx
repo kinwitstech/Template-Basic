@@ -1,4 +1,3 @@
-import React from 'react';
 import { useForm } from 'react-hook-form';
 import { EnvelopeIcon, PhoneIcon, UserIcon, ChatBubbleLeftRightIcon } from '@heroicons/react/24/outline';
 
@@ -37,9 +36,8 @@ const ContactForm = () => {
               </div>
             </div>
           </div>
-
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:px-10">
               <div>
                 <div className="relative">
                   <UserIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-content/70" />
@@ -54,7 +52,6 @@ const ContactForm = () => {
                   <p className="text-red-500 text-sm mt-1">{errors.firstName.message}</p>
                 )}
               </div>
-
               <div>
                 <div className="relative">
                   <UserIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-content/70" />
@@ -70,8 +67,7 @@ const ContactForm = () => {
                 )}
               </div>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:px-10">
               <div>
                 <div className="relative">
                   <EnvelopeIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-content/70" />
@@ -92,7 +88,6 @@ const ContactForm = () => {
                   <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
                 )}
               </div>
-
               <div>
                 <div className="relative">
                   <ChatBubbleLeftRightIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-content/70" />
@@ -108,11 +103,9 @@ const ContactForm = () => {
                 )}
               </div>
             </div>
-
             <div>
-              <div className="relative">
-                <ChatBubbleLeftRightIcon className="absolute left-3 top-4 w-5 h-5 text-neutral-content/70" />
-                
+              <div className="relative lg:px-10">
+                <ChatBubbleLeftRightIcon className="absolute lg:left-13 left-3 top-4 w-5 h-5 text-neutral-content/70 " />
                 <textarea
                   {...register("message", { required: "Message is required" })}
                   rows="4"
@@ -120,12 +113,10 @@ const ContactForm = () => {
                   placeholder="Type your message here..."
                 ></textarea>
               </div>
-
               {errors.subject && (
                 <p className="text-red-500 text-sm mt-1">{errors.subject.message}</p>
               )}
             </div>
-
             <div className="col-span-1 md:col-span-3 flex justify-center">
               <button
                 type="submit"
@@ -134,7 +125,6 @@ const ContactForm = () => {
                 Submit
               </button>
             </div>
-
           </form>
         </div>
     </section>

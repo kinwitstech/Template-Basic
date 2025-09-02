@@ -9,19 +9,19 @@ export default function Jumbotron() {
         backgroundImage: `url(${aboutImage})`,
       }}
     >
-      <div className="absolute inset-0 bg-black opacity-60"></div>
+      <div className="absolute inset-0 bg-black opacity-75"></div>
 
       <div className="container relative h-full flex flex-col sm:items-center justify-center">
         <h2 className="mb-4 text-white">CREATIVE DESIGN</h2>
-        <p className="max-w-2xl mx-auto mb-6 text-white">
+        <p className="max-w-2xl mx-auto mb-6 text-white text-center">
           Kinwits is a Creative Minimal Style Onepage. It is Fully Responsive and Retina Ready.
           Grab This Awesome Template Now.
         </p>
         <div className="flex justify-center space-x-5">
-          <button className="px-6 py-2 text-white bg-secondary hover:bg-secondary/200">
+          <button className="px-6 py-2 text-white bg-secondary/80 hover:bg-secondary/100 hover:scale-110">
             Learn More
           </button>
-          <button className="px-6 py-2 bg-base-300 text-neutral-content hover:bg-base-200">
+          <button className="px-6 py-2 bg-base-300 text-neutral-content hover:bg-base-200 hover:scale-110">
             Purchase It
           </button>
         </div>
