@@ -33,9 +33,9 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="container scroll-mt-30 mb-10 mt-10 lg:my-20 bg-base-100"
+      className="section-container scroll-mt-30 mb-10 mt-10 lg:my-20 bg-base-100"
     >
-      <div className="container mx-auto px-4 bg-base-100">
+      <div className="section-container px-4 bg-base-100">
         <div className="text-center mb-12">
           <h1 className="text-primary">What Our Clients Say</h1>
           <p className="text-base-content/70 mt-2">

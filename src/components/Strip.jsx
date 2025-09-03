@@ -36,13 +36,13 @@ export default function StripSection() {
     >
       <div className="absolute inset-0 bg-black/50"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto py-16 px-6 flex flex-wrap justify-center gap-12">
+      <div className="section-container relative z-10 py-16 px-6 flex flex-wrap justify-center gap-12 lg:gap-30"> 
         {strip.map((item) => (
           <div key={item.id} className="flex items-center gap-4">
             <item.icon className="w-12 h-12 text-white" />
 
             <div className="flex flex-col text-left">
-              <p className="text-4xl text-secondary">{item.value}</p>
+              <p className="text-4xl font-bold text-secondary">{item.value}</p>
               <p className="text-white text-md tracking-wide">{item.label}</p>
             </div>
           </div>

@@ -36,7 +36,7 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="text-info bg-primary">
-      <div className="container p-10">
+      <div className="section-container p-10">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="col-span-1 lg:col-span-2">
             <h3 className="mb-4 text-transparent bg-clip-text bg-primary">
@@ -47,7 +47,7 @@ export default function Footer() {
                 <MapPinIcon className="h-5 w-5 mt-1 mr-3 flex-shrink-0 text-primary-content" />
                 <div>
                   <p className="text-primary-content">ADDRESS</p>
-                  <p className="text-sm text-primary-content/70">
+                  <p className="text-sm text-primary-content/80">
                     Shivam Tower, 1st floor <br/>
                     Kota, Udupi District, KA <br/>
                     INDIA - 576221
@@ -59,7 +59,7 @@ export default function Footer() {
                 <PhoneIcon className="h-5 w-5 mt-1 mr-3 flex-shrink-0 text-primary-content" />
                 <div>
                   <p className="text-primary-content">PHONE</p>
-                  <p className="text-sm text-primary-content/70">01234-56789</p>
+                  <p className="text-sm text-primary-content/80">01234-56789</p>
                 </div>
               </div>
 
@@ -67,7 +67,7 @@ export default function Footer() {
                 <EnvelopeIcon className="h-5 w-5 mt-1 mr-3 flex-shrink-0 text-primary-content" />
                 <div>
                   <p className="text-primary-content">EMAIL</p>
-                  <p className="text-sm text-primary-content/70">info@kinwits.com</p>
+                  <p className="text-sm text-primary-content/80">info@kinwits.com</p>
                 </div>
               </div>
             </div>
@@ -77,7 +77,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="text-primary-content/60 transition-colors duration-300 hover:text-primary-content">
+                  <a href={link.href} className="text-primary-content/80 transition-colors duration-300 hover:text-primary-content">
                     {link.name}
                   </a>
                 </li>
@@ -90,7 +90,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="text-primary-content/60 transition-colors duration-300 hover:text-primary-content">
+                  <a href={link.href} className="text-primary-content/80 transition-colors duration-300 hover:text-primary-content">
                     {link.name}
                   </a>
                 </li>
@@ -101,14 +101,14 @@ export default function Footer() {
 
         <div className="pt-8 mt-12 border-t border-info-content/50">
           <div className="flex flex-col items-center justify-between md:flex-row">
-            <p className="text-sm text-primary-content/70">
+            <p className="text-sm text-primary-content/90">
               © {new Date().getFullYear()} Kinwits. All rights reserved.
             </p>
             <div className="flex mt-4 space-x-6 md:mt-0">
-              <a href="#" className="text-sm text-primary-content/70 transition-colors">
+              <a href="#" className="text-sm text-primary-content/90 transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-sm text-primary-content/70 transition-colors">
+              <a href="#" className="text-sm text-primary-content/90 transition-colors">
                 Terms of Service
               </a>
             </div>

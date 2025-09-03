@@ -17,13 +17,13 @@ const ContactForm = () => {
 
   return (
     <section id="contact" className="w-full scroll-mt-15 p-10 bg-base-200">
-      <div className="container px-4 lg:px-40">
+      <div className="section-container px-4 lg:px-40">
           <div className="text-center mb-12">
             <h1 className="text-primary mb-4">
               Contact Me
             </h1>
             <div className="flex-center mb-6">
-              <div className="flex-center space-x-6 text-info/50">
+              <div className="flex-center space-x-6 text-info/80">
                 <div className="flex-center space-x-2">
                   <EnvelopeIcon className="w-5 h-5" />
                   <span>info@site.com</span>
@@ -37,7 +37,7 @@ const ContactForm = () => {
             </div>
           </div>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:px-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:px-20">
               <div>
                 <div className="relative">
                   <UserIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-content/70" />
@@ -67,7 +67,7 @@ const ContactForm = () => {
                 )}
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:px-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:px-20">
               <div>
                 <div className="relative">
                   <EnvelopeIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-content/70" />
@@ -104,8 +104,8 @@ const ContactForm = () => {
               </div>
             </div>
             <div>
-              <div className="relative lg:px-10">
-                <ChatBubbleLeftRightIcon className="absolute lg:left-13 left-3 top-4 w-5 h-5 text-neutral-content/70 " />
+              <div className="relative lg:px-20">
+                <ChatBubbleLeftRightIcon className="absolute lg:left-23 left-3 top-4 w-5 h-5 text-neutral-content/70 " />
                 <textarea
                   {...register("message", { required: "Message is required" })}
                   rows="4"

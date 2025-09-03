@@ -41,29 +41,15 @@ const galleryItems = [
   },
 ];
 
+const getInitialLimit = () =>
+  typeof window !== "undefined" && window.innerWidth >= 1024 ? 4 : 2;
+
 function Products() {
-  const [initialLimit, setInitialLimit] = useState(2);
-  const [visibleCount, setVisibleCount] = useState(2);
+  const initialLimit = getInitialLimit();
+  const [visibleCount, setVisibleCount] = useState(initialLimit);
   const [selectedItem, setSelectedItem] = useState(null);
 
   const allVisible = visibleCount >= galleryItems.length;
-
-  useEffect(() => {
-    const mq = window.matchMedia("(min-width: 1024px)");
-
-    const applyLimit = () => {
-      const limit = mq.matches ? 4 : 2;
-      setInitialLimit(limit);
-      setVisibleCount((prev) =>
-        prev >= galleryItems.length ? prev : limit
-      );
-    };
-
-    applyLimit();
-
-    mq.addEventListener("change", applyLimit);
-    return () => mq.removeEventListener("change", applyLimit);
-  }, []);
 
   const handleShowMore = () => {
     setVisibleCount((prev) =>
@@ -73,25 +59,20 @@ function Products() {
 
   const handleShowLess = () => {
     setVisibleCount(initialLimit);
-    const section = document.getElementById("products");
-    if (section) section.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("products")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section
-      id="products"
-      className="w-full scroll-mt-15 bg-base-200 p-10 md:p-10"
-    >
-      <div className="max-w-screen-xl mx-auto px-4">
+    <section id="products" className="section-container scroll-mt-15 bg-base-200">
+      <div className="container p-10">
         <div className="text-center mb-10">
           <h1 className="text-primary mb-4">Our Products</h1>
         </div>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {galleryItems.slice(0, visibleCount).map((item) => (
             <div
               key={item.id}
-              className="bg-white font-serif rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group"
+              className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group"
             >
               <div className="relative overflow-hidden">
                 <img
@@ -99,28 +80,18 @@ function Products() {
                   alt={item.title}
                   className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div
-                  className="
-                  absolute inset-0 
-                  bg-gradient-to-t from-black/80 via-black/20 to-transparent 
-                  opacity-80 lg:opacity-0 lg:group-hover:opacity-100 
-                  transition-all duration-300
-                "
-                >
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-300">
                   <div className="absolute top-4 right-4 flex space-x-2">
                     <button
-                      aria-label="View product details"
-                      className="bg-white/20 backdrop-blur-md p-3 rounded-full hover:bg-white/30 transition-all duration-200"
                       onClick={() => setSelectedItem(item)}
+                      className="bg-white/20 backdrop-blur-md p-3 rounded-full hover:bg-white/30 transition-all duration-200"
                     >
                       <EyeIcon className="w-5 h-5 text-white" />
                     </button>
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-4">
                     <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-4">
-                      <h5 className="font-bold text-white mb-2">
-                        {item.title}
-                      </h5>
+                      <h5 className="font-bold text-white mb-2">{item.title}</h5>
                       <p className="text-white/90 text-sm line-clamp-2">
                         {item.description}
                       </p>
@@ -131,7 +102,6 @@ function Products() {
             </div>
           ))}
         </div>
-
         {galleryItems.length > initialLimit && (
           <div className="flex justify-center mt-8">
             {!allVisible ? (
@@ -151,47 +121,31 @@ function Products() {
             )}
           </div>
         )}
-
         {selectedItem && (
           <div
             className="fixed inset-0 bg-black/70 backdrop-blur-sm flex justify-center items-center z-50"
             onClick={() => setSelectedItem(null)}
           >
             <div
-              className="
-                relative 
-                mx-auto 
-                rounded-xl 
-                shadow-lg 
-                overflow-hidden 
-                flex flex-col 
-                bg-white
-                max-w-[90vw] 
-                max-h-[90vh]
-              "
+              className="relative mx-auto rounded-xl shadow-lg overflow-hidden flex flex-col bg-white max-w-[90vw] max-h-[90vh]"
               onClick={(e) => e.stopPropagation()}
             >
               <button
-                aria-label="Close modal"
-                className="absolute top-3 right-3 bg-black/60 text-white rounded-full p-2 hover:bg-black/80"
                 onClick={() => setSelectedItem(null)}
+                className="absolute top-3 right-3 bg-black/60 text-white rounded-full p-2 hover:bg-black/80"
               >
                 <XMarkIcon className="h-5 w-5" />
               </button>
-
               <img
                 src={selectedItem.image}
                 alt={selectedItem.title}
                 className="object-contain max-w-full max-h-[70vh] h-auto w-auto mx-auto bg-black"
               />
-
               <div className="p-6 text-center">
                 <h4 className="font-semibold text-gray-800">
                   {selectedItem.title}
                 </h4>
-                <p className="mt-2 text-gray-600">
-                  {selectedItem.description}
-                </p>
+                <p className="mt-2 text-gray-600">{selectedItem.description}</p>
               </div>
             </div>
           </div>
@@ -200,5 +154,4 @@ function Products() {
     </section>
   );
 }
-
 export default Products;
