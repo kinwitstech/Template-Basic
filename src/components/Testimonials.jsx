@@ -1,8 +1,7 @@
-import React, { useRef } from "react";
-import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-} from "@heroicons/react/24/outline";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+
 
 const testimonials = [
   {
@@ -29,94 +28,52 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
-  const scrollContainer = useRef(null);
-
-  const scrollLeft = () => {
-    if (scrollContainer.current) {
-      scrollContainer.current.scrollBy({
-        left: -scrollContainer.current.offsetWidth,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollContainer.current) {
-      scrollContainer.current.scrollBy({
-        left: scrollContainer.current.offsetWidth,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
-    <section id="testimonials" className="container scroll-mt-20 mt-10 sm:mt-15 lg:mt-20 bg-base-200">
-      <div className="container mx-auto px-4 bg-base-200">
-        {/* Section Header */}
+    <section
+      id="testimonials"
+      className="section-container scroll-mt-30 mb-10 mt-10 lg:my-20 bg-base-100"
+    >
+      <div className="section-container px-4 bg-base-100">
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-serif text-accent">
-            What Our Clients Say
-          </h2>
-          <p className="font-serif text-base-content/70 mt-2">
+          <h1 className="text-primary">What Our Clients Say</h1>
+          <p className="text-base-content/70 mt-2">
             Hear from those who’ve experienced the difference.
           </p>
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          {/* Left Button - only desktop */}
-          <button
-            onClick={scrollLeft}
-            className="
-              hidden lg:block
-              absolute top-1/2 -translate-y-1/2 
-              -left-12 z-10 bg-gradient-to-r from-primary to-accent rounded-full p-3 shadow-lg 
-              hover:shadow-xl transition-all duration-200 hover:scale-110 
-              focus:outline-none focus:ring-2 focus:ring-primary
-            "
-            aria-label="Scroll left"
-          >
-            <ChevronLeftIcon className="w-6 h-6 text-white hover:cursor-pointer" />
-          </button>
-
-          {/* Right Button - only desktop */}
-          <button
-            onClick={scrollRight}
-            className="
-              hidden lg:block
-              absolute top-1/2 -translate-y-1/2 
-              -right-12 z-10 bg-gradient-to-r from-primary to-accent rounded-full p-3 shadow-lg 
-              hover:shadow-xl transition-all duration-200 hover:scale-110 
-              focus:outline-none focus:ring-2 focus:ring-primary
-            "
-            aria-label="Scroll right"
-          >
-            <ChevronRightIcon className="w-6 h-6 text-white hover:cursor-pointer" />
-          </button>
-
-          {/* Scroll Container */}
-          <div
-            ref={scrollContainer}
-            className="flex overflow-x-auto lg:overflow-hidden scrollbar-hide snap-x snap-mandatory scroll-smooth"
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            slidesPerView={1}
+            loop={true}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+            pagination={{ clickable: true }}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            }}
+            className="rounded-2xl"
           >
             {testimonials.map((testimonial) => (
-              <div
-                key={testimonial.id}
-                className="flex-none w-full snap-center bg-base-100 rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-12 hover:shadow-xl transition-shadow duration-300 mx-2"
-              >
-                <div className="flex flex-col items-center text-center">
-                  <p className="text-lg italic font-serif text-base-content/80 mb-4">
-                    "{testimonial.feedback}"
-                  </p>
-                  <h4 className="text-xl font-serif font-semibold text-base-content">
-                    {testimonial.name}
-                  </h4>
-                  <p className="text-sm font-serif text-base-content/60">
-                    {testimonial.role}
-                  </p>
+              <SwiperSlide key={testimonial.id}>
+                <div className="bg-base-200/80 rounded-2xl shadow-md p-6 sm:p-8 md:p-10 lg:p-20 hover:shadow-xl transition-shadow duration-300">
+                  <div className="flex flex-col items-center text-center">
+                    <p className="italic text-base-content/80 mb-4">
+                      "{testimonial.feedback}"
+                    </p>
+                    <h5 className="font-semibold text-base-content">
+                      {testimonial.name}
+                    </h5>
+                    <h6 className="text-base-content/60">{testimonial.role}</h6>
+                  </div>
                 </div>
-              </div>
+              </SwiperSlide>
             ))}
-          </div>
+
+          </Swiper>
         </div>
       </div>
     </section>

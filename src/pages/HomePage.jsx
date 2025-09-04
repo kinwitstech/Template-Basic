@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Jumbotron from '../components/Jumbotron';
 import About from '../components/About';
-import FAQ from '../components/faq';
 import Testimonials from '../components/Testimonials';
 import ContactUs from '../components/ContactUs';
 import Products from '../components/Products';
+import StripSection from '../components/Strip';
 
 const HomePage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,7 +24,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-base-200">
+    <div className="min-h-screen bg-base-100">
       <Navbar />
       
       <Jumbotron />
@@ -33,7 +33,7 @@ const HomePage = () => {
 
       <Products />
 
-      <FAQ />
+      <StripSection />
 
       <Testimonials />
 
@@ -44,7 +44,7 @@ const HomePage = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed z-50 p-3 text-white opacity-70 bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:opacity-100 hover:cursor-pointer rounded-full bottom-8 right-8"
+          className="fixed z-50 p-3 text-white opacity-70 bg-primary hover:shadow-lg hover:opacity-100 hover:cursor-pointer rounded-full bottom-8 right-8"
           aria-label="Scroll to top"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

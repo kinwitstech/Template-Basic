@@ -14,16 +14,16 @@
   prefersdark: false;
 
   /* Base Colors */
-  --color-base-100: #FFFCF2; /* cream */
-  --color-base-200: #f2eee6;
-  --color-base-300: #e4e0d8;
+  --color-base-100: #FFFFFF; /* cream */
+  --color-base-200: #f7f7f5;
+  --color-base-300: #f2f2e6;
   --color-base-content: #252422; /* charcoal for readability */
 
   /* Core Brand */
-  --color-primary: #EB5E28; /* rustic orange */
-  --color-primary-content: #ffffff;
+  --color-primary: #020031; 
+  --color-primary-content: #FFFFFF;
 
-  --color-secondary: #CCC5B9; /* warm beige */
+  --color-secondary: #fc8803; 
   --color-secondary-content: #252422;
 
   --color-accent: #403D39; /* deep taupe-gray */
