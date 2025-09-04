@@ -120,7 +120,7 @@ const ContactForm = () => {
             <div className="col-span-1 md:col-span-3 flex justify-center">
               <button
                 type="submit"
-                className="bg-secondary text-white py-2 px-8 hover:scale-110"
+                className="bg-secondary text-white py-2 px-8"
               >
                 Submit
               </button>

@@ -1,12 +1,10 @@
-import aboutImage from "../assets/pic.jpg";
-
 export default function Jumbotron() {
   return (
     <section
       id="home"
       className="relative w-full h-screen text-center bg-cover bg-center"
       style={{
-        backgroundImage: `url(${aboutImage})`,
+        backgroundImage: `url(https://images.unsplash.com/photo-1678690832310-cf614292671d?q=80&w=1389&auto=format&fit=crop&ixlib=rb)`,
       }}
     >
       <div className="absolute inset-0 bg-black opacity-75"></div>
@@ -18,10 +16,10 @@ export default function Jumbotron() {
           Grab This Awesome Template Now.
         </p>
         <div className="flex justify-center space-x-5">
-          <button className="px-6 py-2 text-white bg-secondary/80 hover:bg-secondary/100 hover:scale-110">
+          <button className="px-6 py-2 text-white bg-secondary/80 hover:bg-secondary/100">
             Learn More
           </button>
-          <button className="px-6 py-2 bg-base-300 text-neutral-content hover:bg-base-200 hover:scale-110">
+          <button className="px-6 py-2 bg-base-300 text-neutral-content hover:bg-base-200">
             Purchase It
           </button>
         </div>

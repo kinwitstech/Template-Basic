@@ -51,7 +51,7 @@
   }
 
   button {
-    @apply rounded-2xl cursor-pointer transition focus:ring-0 focus:ring-offset-0 focus:outline-none hover:shadow-xl;
+    @apply rounded-2xl cursor-pointer transition focus:ring-0 focus:ring-offset-0 focus:outline-none hover:scale-110 hover:shadow-xl;
   }
 
   small {

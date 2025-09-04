@@ -1,12 +1,11 @@
 import { AcademicCapIcon, UsersIcon, BriefcaseIcon, PencilSquareIcon } from "@heroicons/react/24/outline";
-import image from "../assets/strip.jpg";
 
 const strip = [
   {
     id: 1,
     icon: AcademicCapIcon,
     value: "50",
-    label: "PROJECTS",
+    label: "PROJECTsS",
   },
   {
     id: 2,
@@ -32,7 +31,7 @@ export default function StripSection() {
   return (
     <section
       className="relative bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${image})` }}
+      style={{ backgroundImage: `url(https://images.unsplash.com/photo-1522071901873-411886a10004?q=80&w=1470&auto=format&fit=crop&ixlib=rb)` }}
     >
       <div className="absolute inset-0 bg-black/50"></div>
 

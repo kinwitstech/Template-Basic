@@ -1,5 +1,4 @@
 import { useState } from "react";
-import aboutImage from "../assets/about.jpg";
 
 export default function About() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +25,7 @@ export default function About() {
           </p>
           <button
             onClick={() => setIsOpen(true)}
-            className="px-6 py-2 text-white bg-secondary hover:scale-110 transition-transform"
+            className="px-6 py-2 w-32 h-10 text-white bg-secondary transition-transform"
           >
             Read More
           </button>
@@ -34,7 +33,7 @@ export default function About() {
 
         <div>
           <img
-            src={aboutImage}
+            src="https://images.unsplash.com/photo-1574556132185-5f4a6ffa80c6?q=80&w=1974&auto=format&fit=crop&ixlib=rb"
             alt="About Kinwits"
             className="object-cover w-full rounded-3xl shadow-lg"
           />
@@ -69,7 +68,7 @@ export default function About() {
             </p>
             <div className="modal-action">
               <button
-                className="px-6 py-2 text-white bg-secondary hover:scale-110 transition-transform"
+                className="px-6 py-2 text-white bg-secondary transition-transform"
                 onClick={() => setIsOpen(false)}
               >
                 Close

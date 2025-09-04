@@ -63,8 +63,8 @@ function Products() {
   };
 
   return (
-    <section id="products" className="section-container scroll-mt-15 bg-base-200">
-      <div className="container p-10">
+    <section id="products" className="w-full scroll-mt-15 bg-base-200">
+      <div className="section-container p-10">
         <div className="text-center mb-10">
           <h1 className="text-primary mb-4">Our Products</h1>
         </div>
