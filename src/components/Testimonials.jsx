@@ -1,7 +1,5 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import "swiper/css";
 
 
@@ -61,7 +59,7 @@ export default function Testimonials() {
           >
             {testimonials.map((testimonial) => (
               <SwiperSlide key={testimonial.id}>
-                <div className="bg-base-200 rounded-2xl shadow-md p-6 sm:p-8 md:p-10 lg:p-20 hover:shadow-xl transition-shadow duration-300">
+                <div className="bg-base-200/80 rounded-2xl shadow-md p-6 sm:p-8 md:p-10 lg:p-20 hover:shadow-xl transition-shadow duration-300">
                   <div className="flex flex-col items-center text-center">
                     <p className="italic text-base-content/80 mb-4">
                       "{testimonial.feedback}"

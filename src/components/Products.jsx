@@ -63,7 +63,7 @@ function Products() {
   };
 
   return (
-    <section id="products" className="w-full scroll-mt-15 bg-base-200">
+    <section id="products" className="w-full scroll-mt-15 bg-base-200/50">
       <div className="section-container p-10">
         <div className="text-center mb-10">
           <h1 className="text-primary mb-4">Our Products</h1>

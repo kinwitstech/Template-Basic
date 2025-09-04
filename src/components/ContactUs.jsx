@@ -16,14 +16,14 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="w-full scroll-mt-15 p-10 bg-base-200">
+    <section id="contact" className="w-full scroll-mt-15 p-10 bg-base-200/50">
       <div className="section-container px-4 lg:px-40">
           <div className="text-center mb-12">
             <h1 className="text-primary mb-4">
               Contact Me
             </h1>
             <div className="flex-center mb-6">
-              <div className="flex-center space-x-6 text-info/80">
+              <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-info/80">
                 <div className="flex-center space-x-2">
                   <EnvelopeIcon className="w-5 h-5" />
                   <span>info@site.com</span>
