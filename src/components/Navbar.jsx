@@ -50,7 +50,7 @@ export default function Navbar() {
               key={item.name}
               href={item.href}
               onClick={(e) => scrollToSection(e, item.href)}
-              className="py-2 text-sm text-base-content hover:text-primary"
+              className="py-2 text-sm text-base-content hover:text-secondary hover:no-underline"
             >
               {item.name}
             </a>
@@ -112,7 +112,7 @@ export default function Navbar() {
             key={item.name}
             href={item.href}
             onClick={(e) => scrollToSection(e, item.href)}
-            className="text-base-content hover:text-primary"
+            className="text-base-content hover:text-secondary hover:no-underline"
           >
             {item.name}
           </a>

@@ -99,7 +99,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 mt-12 border-t border-info-content/50">
+        <div className="pt-8 mt-12 border-t border-base-100/60">
           <div className="flex flex-col items-center justify-between md:flex-row">
             <p className="text-sm text-primary-content/90">
               © {new Date().getFullYear()} Kinwits. All rights reserved.
